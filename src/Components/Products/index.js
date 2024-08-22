@@ -1,8 +1,10 @@
 import React from "react";
 import Link from "next/link";
+import ProductCard from "./ProductCard";
+
 const Products = ({ name, title, data }) => {
   return (
-    <section className="w-full h-96">
+    <section className="w-full flex flex-col gap-5">
       <div className="p-8 flex justify-between items-end">
         <div className="flex flex-col gap-5">
           <div className="flex gap-2 items-center justify-start">
@@ -13,10 +15,17 @@ const Products = ({ name, title, data }) => {
         </div>
         <Link
           href={""}
-          className="bg-primary px-20 py-3 rounded-[4px] text-white text-l w-fit hover:bg-primary hover:bg-opacity-75"
+          className="bg-primary text-center w-60 px-4 py-3 rounded-[4px] text-white text-l hover:bg-primary hover:bg-opacity-75 max-h-fit"
         >
           View All
         </Link>
+      </div>
+      <div className="flex gap-10 flex-wrap px-12 justify-center">
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
+        <ProductCard />
       </div>
     </section>
   );

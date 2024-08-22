@@ -6,7 +6,7 @@ export default function Home() {
   return (
     <main className="flex flex-col flex-1">
       <section className="flex">
-        <div className="basis-3/4 flex flex-col gap-10 px-28 py-14 justify-center">
+        <div className="basis-3/4 flex flex-col gap-10 px-28 py-14 justify-center max-md:pr-10">
           <h1 className="text-xxxl max-w-[700px] m-0 tracking-tight leading-[70px]">
             Discover Your Style with Our Exclusive Collection
           </h1>

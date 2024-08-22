@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+
 module.exports = {
   content: [
     "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
@@ -12,6 +13,7 @@ module.exports = {
         primary: "#B487C9",
         white: "#FFFFFF",
         text: "#2C3E50",
+        item_background: "#FAFAFA",
       },
       fontSize: {
         sm: "8px",
@@ -23,5 +25,4 @@ module.exports = {
       },
     },
   },
-  plugins: [],
 };
