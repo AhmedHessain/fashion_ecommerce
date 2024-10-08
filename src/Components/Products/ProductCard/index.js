@@ -8,6 +8,7 @@ import cn from "@/utils/cn";
 const poppins = Poppins({
   weight: ["400", "700"], // Choose weights you need
   subsets: ["latin"], // Choose subsets you need
+  display: "swap",
 });
 
 const ProductCard = () => {
@@ -17,7 +18,17 @@ const ProductCard = () => {
       <div className="px-6 flex pt-5 pb-3 flex-1">
         {/* image */}
         <div className="bg-primary bg-opacity-25 flex justify-center items-center relative shadow-md ">
-          <Image src="/Frame 609.png" width={200} height={200} alt="product" />
+          <div className="w-52 h-52 p-8">
+            <Image
+              src="/Frame 609.png"
+              sizes="(max-width: 768px) 100vw, 33vw"
+              width={0}
+              height={0}
+              alt="product"
+              className="h-full"
+              quality={100}
+            />
+          </div>
           <div className="bg-primary text-white px-5 py-1 rounded absolute top-2 left-3">
             New
           </div>
@@ -33,7 +44,7 @@ const ProductCard = () => {
       </div>
       {/* Lower div */}
       <div className={cn(`gap-2 flex flex-col p-4`, poppins.className)}>
-        <p className=" font-bold ">Gucci duffle bag</p>
+        <p className={cn("font-bold", poppins.className)}>Gucci duffle bag</p>
         <div className="flex items-center gap-3">
           <p className="text-text  font-bold">$960</p>
           <p className="opacity-50 line-through font-bold">$1160</p>
