@@ -12,7 +12,7 @@ export async function uploadImageFromBuffer(file) {
 
   return new Promise((resolve, reject) => {
     const stream = cloudinary.uploader.upload_stream(
-      { folder: "fashion-images" },
+      { folder: "fashion-images/UserImages" },
       (error, result) => {
         if (error) {
           reject(error);
@@ -23,5 +23,24 @@ export async function uploadImageFromBuffer(file) {
     );
 
     stream.end(fileBuffer);
+  });
+}
+export async function uploadImageFromUrl(imageUrl) {
+  if (!imageUrl) {
+    throw new Error("No image URL provided");
+  }
+
+  return new Promise((resolve, reject) => {
+    cloudinary.uploader.upload(
+      imageUrl,
+      { folder: "fashion-images/UserImages" },
+      (error, result) => {
+        if (error) {
+          reject(error);
+        } else {
+          resolve(result.secure_url);
+        }
+      }
+    );
   });
 }

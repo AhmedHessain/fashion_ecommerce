@@ -1,0 +1,3904 @@
+{
+  "products": [
+    {
+      "name": "Perfume Chanel Coco-mademoiselle Perfume",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Coco Mademoiselle Perfume by Chanel",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "chanel",
+        "coco-mademoiselle"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_coco-mademoiselle-perfume_chanel.png",
+      "firstCreatedDate": "2024-04-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 239
+    },
+    {
+      "name": "Pants Denim Unusual",
+      "price": 99.99,
+      "quantity": 35,
+      "description": "Unique unusual denim pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "denim",
+        "unusual"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/unusual-denim-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 23
+    },
+    {
+      "name": "Silver Bird Pendant Necklace",
+      "price": 139.99,
+      "quantity": 45,
+      "description": "Delicate silver bird pendant necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "silver",
+        "bird",
+        "pendant"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver_bird_pendant_necklace.png",
+      "firstCreatedDate": "2024-04-22T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 64
+    },
+    {
+      "name": "Blue Flower Bracelet",
+      "price": 99.99,
+      "quantity": 45,
+      "description": "Delicate blue flower bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "blue",
+        "flower"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_blue-flower-bracelet.png",
+      "firstCreatedDate": "2024-02-19T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 297
+    },
+    {
+      "name": "Jeans Blue",
+      "price": 79.99,
+      "quantity": 45,
+      "description": "Classic blue jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "blue"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 32
+    },
+    {
+      "name": "High Heels with Ankle Strap",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "White high heels with ankle strap",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "white",
+        "ankle-strap"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_image_white_high_heels_with_ankle_strap.png",
+      "firstCreatedDate": "2024-05-17T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 220
+    },
+    {
+      "name": "Handbag Round Floral Embroidered Handbag",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Round floral embroidered handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "round",
+        "floral",
+        "embroidered"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/round-floral-embroidered-handbag.png",
+      "firstCreatedDate": "2024-04-01T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 46
+    },
+    {
+      "name": "Dress Blue Long-sleeve Ruffled",
+      "price": 109.99,
+      "quantity": 35,
+      "description": "Elegant blue long sleeve dress with ruffled bell sleeves",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "blue",
+        "long-sleeve",
+        "ruffled",
+        "bell-sleeve"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-long-sleeve-dress-ruffled-bell-sleeve.png",
+      "firstCreatedDate": "2024-06-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 191
+    },
+    {
+      "name": "product_image_white_high_heels",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "White high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "white"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_image_white_high_heels.png",
+      "firstCreatedDate": "2024-05-16T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 64
+    },
+    {
+      "name": "Heart Shaped Jewelry Bracelet",
+      "price": 149.99,
+      "quantity": 50,
+      "description": "Beautiful heart shaped jewelry bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "heart",
+        "jewelry"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/photo_heart-shaped-jewelry-bracelet.png",
+      "firstCreatedDate": "2024-03-27T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 215
+    },
+    {
+      "name": "Jewelry Floral Gold Ring",
+      "price": 189.99,
+      "quantity": 40,
+      "description": "Elegant floral gold ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "gold",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/jewelry_floral-gold-ring.png",
+      "firstCreatedDate": "2024-03-17T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 184
+    },
+    {
+      "name": "Pants Wide-leg",
+      "price": 79.99,
+      "quantity": 45,
+      "description": "Classic wide leg pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/wide-leg-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 162
+    },
+    {
+      "name": "Perfume Avril-lavigne Forbidden-rose",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "Avril Lavigne Forbidden Rose Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "avril-lavigne",
+        "forbidden-rose"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_avril-lavigne_forbidden-rose-perfume.png",
+      "firstCreatedDate": "2024-04-14T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 188
+    },
+    {
+      "name": "Pants Beige Wide-leg",
+      "price": 79.99,
+      "quantity": 45,
+      "description": "Classic beige wide leg pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "beige",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beige-wide-leg-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 29
+    },
+    {
+      "name": "Diamond Embedded Bracelet",
+      "price": 249.99,
+      "quantity": 35,
+      "description": "Luxurious diamond embedded bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "diamond"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_diamond-embedded-bracelet.png",
+      "firstCreatedDate": "2024-03-01T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 67
+    },
+    {
+      "name": "Silver Star Bracelet",
+      "price": 59.99,
+      "quantity": 55,
+      "description": "Delicate silver star bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "silver",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_silver-star-bracelet.png",
+      "firstCreatedDate": "2024-03-01T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 132
+    },
+    {
+      "name": "Bow Design Earrings",
+      "price": 79.99,
+      "quantity": 50,
+      "description": "Elegant bow design earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_bow-design-earrings.png",
+      "firstCreatedDate": "2024-02-21T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 37
+    },
+    {
+      "name": "Necklace with Wings and Purple Heart",
+      "price": 199.99,
+      "quantity": 35,
+      "description": "Unique necklace with wings and purple heart pendant",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "wings",
+        "heart",
+        "purple"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_necklace_with_wings_and_purple_heart_pendant.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 177
+    },
+    {
+      "name": "Dress Floral Blue",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Charming floral blue dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "blue"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-blue-dress.png",
+      "firstCreatedDate": "2024-06-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 57
+    },
+    {
+      "name": "Ring with Ruby and Diamonds",
+      "price": 299.99,
+      "quantity": 35,
+      "description": "Luxurious ring with ruby and diamonds",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "ruby",
+        "diamonds"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/ring_with_ruby_and_diamonds.png",
+      "firstCreatedDate": "2024-04-06T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 209
+    },
+    {
+      "name": "Jeans Denim Floral",
+      "price": 89.99,
+      "quantity": 35,
+      "description": "Beautiful denim jeans with floral pattern",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "denim",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/productimage_denim-jeans-with-floral-pattern.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 178
+    },
+    {
+      "name": "Top Green Button Unique-sleeves",
+      "price": 79.99,
+      "quantity": 40,
+      "description": "Unique green top with button details and special sleeves",
+      "category": "Tops",
+      "tags": [
+        "top",
+        "green",
+        "button",
+        "unique-sleeves"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/green-top-with-button-details-and-unique-sleeves.png",
+      "firstCreatedDate": "2024-06-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 281
+    },
+    {
+      "name": "Heart Shaped Pendant Necklace",
+      "price": 169.99,
+      "quantity": 40,
+      "description": "Elegant heart shaped pendant necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "heart",
+        "pendant"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_heart-shaped-pendant-necklace.png",
+      "firstCreatedDate": "2024-03-11T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 0
+    },
+    {
+      "name": "Golden Butterfly Sneakers",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "White sneakers with gold butterfly design",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "gold",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sneakers_white_with_gold_butterfly_design.png",
+      "firstCreatedDate": "2024-05-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 283
+    },
+    {
+      "name": "Jeans Flare Lace-up",
+      "price": 99.99,
+      "quantity": 40,
+      "description": "Trendy flare jeans with lace-up detail",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "flare",
+        "lace-up"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image_flare-jeans-with-lace-up-detail.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 262
+    },
+    {
+      "name": "Canvas Backpack",
+      "price": 89.99,
+      "quantity": 55,
+      "description": "Stylish canvas backpack with brown and tan straps",
+      "category": "Bags",
+      "tags": [
+        "backpack",
+        "canvas",
+        "casual"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/canvas-backpack-brown-tan-straps.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 45
+    },
+    {
+      "name": "Handbag Pink Butterfly Flower Handbag",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Pink handbag with butterfly charm and flower design",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "pink",
+        "butterfly",
+        "flower"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-handbag-butterfly-charm-flower-design.png",
+      "firstCreatedDate": "2024-03-26T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 232
+    },
+    {
+      "name": "Handbag White Gold Chain Handbag",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "White handbag with gold chain and pearl decoration",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "white",
+        "gold",
+        "chain",
+        "pearl"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-handbag-with-gold-chain-and-pearl-decoration.png.png",
+      "firstCreatedDate": "2024-04-03T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 147
+    },
+    {
+      "name": "Heels Elegant Embellishments",
+      "price": 159.99,
+      "quantity": 30,
+      "description": "Women's elegant heels with embellishments",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "elegant",
+        "embellishments"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/womens-elegant-heels-with-embellishments.png",
+      "firstCreatedDate": "2024-06-03T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 202
+    },
+    {
+      "name": "Perfume Good-girl Perfume",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Good Girl Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "good-girl"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_good-girl-perfume.png",
+      "firstCreatedDate": "2024-04-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 94
+    },
+    {
+      "name": "Silver and Blue Moon Star Necklace",
+      "price": 169.99,
+      "quantity": 45,
+      "description": "Elegant silver and blue moon star necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "silver",
+        "blue",
+        "moon",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver-and-blue-moon-star-necklace.png",
+      "firstCreatedDate": "2024-04-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 64
+    },
+    {
+      "name": "Gold Bracelets Set",
+      "price": 179.99,
+      "quantity": 40,
+      "description": "Luxurious set of gold bracelets",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "gold",
+        "set"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gold-bracelets.png",
+      "firstCreatedDate": "2024-02-01T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 191
+    },
+    {
+      "name": "Axixi Handbag",
+      "price": 159.99,
+      "quantity": 40,
+      "description": "Stylish Axixi handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "fashion",
+        "accessory"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/Axixi_handbag.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 194
+    },
+    {
+      "name": "Pink Floral Dress",
+      "price": 89.99,
+      "quantity": 45,
+      "description": "Charming pink floral dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "pink",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-floral-dress.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 83
+    },
+    {
+      "name": "Handbag Green Cat Charm Handbag",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Green handbag with cat charm",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "green",
+        "cat",
+        "charm"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_green-handbag-cat-charm.png",
+      "firstCreatedDate": "2024-03-23T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 254
+    },
+    {
+      "name": "Perfume Victor Perfume",
+      "price": 119.99,
+      "quantity": 35,
+      "description": "Victor's Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "victor"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_victors-perfume.png",
+      "firstCreatedDate": "2024-04-05T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 119
+    },
+    {
+      "name": "Perfume Chanel No5 Leau Perfume",
+      "price": 159.99,
+      "quantity": 35,
+      "description": "Chanel No. 5 L'Eau Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "chanel",
+        "no5",
+        "leau"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image_chanel-no5-leau.png",
+      "firstCreatedDate": "2024-04-11T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 94
+    },
+    {
+      "name": "Perfume Carolina-herrera Good-girl",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Good Girl Perfume by Carolina Herrera",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "carolina-herrera",
+        "good-girl"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_good-girl-carolina-herrera.png",
+      "firstCreatedDate": "2024-04-19T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 153
+    },
+    {
+      "name": "Pants Black Flared",
+      "price": 89.99,
+      "quantity": 35,
+      "description": "Stylish black flared pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "black",
+        "flared"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-flared-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 106
+    },
+    {
+      "name": "Dress Floral Summer",
+      "price": 89.99,
+      "quantity": 45,
+      "description": "Light and airy floral print summer dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "summer"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-print-summer-dress.png",
+      "firstCreatedDate": "2024-06-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 162
+    },
+    {
+      "name": "Beach Ornament",
+      "price": 19.99,
+      "quantity": 50,
+      "description": "Beautiful beach-themed ornament",
+      "category": "Accessories",
+      "tags": [
+        "ornament",
+        "beach",
+        "accessory"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beach-ornament.png",
+      "firstCreatedDate": "2024-01-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "discount": 10,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 255
+    },
+    {
+      "name": "Heels Ornate Floral",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Ornate floral high heel shoe",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "ornate",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_ornate-floral-high-heel-shoe.png",
+      "firstCreatedDate": "2024-05-05T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 75
+    },
+    {
+      "name": "Boots Beige Platform Ankle",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Beige platform ankle boots",
+      "category": "Shoes",
+      "tags": [
+        "boots",
+        "beige",
+        "platform",
+        "ankle"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beige-platform-ankle-boots.png",
+      "firstCreatedDate": "2024-05-01T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 178
+    },
+    {
+      "name": "Jeans Denim Cargo",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Classic denim cargo jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "denim",
+        "cargo"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/denim-cargo-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 132
+    },
+    {
+      "name": "Dress Black Long-sleeve Maxi",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Elegant black long sleeve maxi dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "black",
+        "long-sleeve",
+        "maxi"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-long-sleeve-maxi-dress.png",
+      "firstCreatedDate": "2024-06-06T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 192
+    },
+    {
+      "name": "Black Leather Backpack",
+      "price": 149.99,
+      "quantity": 50,
+      "description": "Classic black leather backpack",
+      "category": "Bags",
+      "tags": [
+        "backpack",
+        "leather",
+        "black"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-leather-backpack.png",
+      "firstCreatedDate": "2024-03-05T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 15
+    },
+    {
+      "name": "product_image_burgundy_suede_high_heels",
+      "price": 149.99,
+      "quantity": 30,
+      "description": "Burgundy suede high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "burgundy",
+        "suede"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_image_burgundy_suede_high_heels.png",
+      "firstCreatedDate": "2024-05-14T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 236
+    },
+    {
+      "name": "Blue Diamond Cluster Jewelry",
+      "price": 299.99,
+      "quantity": 30,
+      "description": "Stunning blue diamond cluster jewelry piece",
+      "category": "Accessories",
+      "tags": [
+        "jewelry",
+        "diamond",
+        "blue"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/jewelry_blue-diamond-cluster.png",
+      "firstCreatedDate": "2024-01-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 79
+    },
+    {
+      "name": "Three Layer Gold Butterfly Necklace",
+      "price": 199.99,
+      "quantity": 35,
+      "description": "Luxurious three layer gold necklace with butterfly design",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "gold",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_three-layer-gold-butterfly-necklace.png",
+      "firstCreatedDate": "2024-02-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 287
+    },
+    {
+      "name": "Dress Floral Puff-sleeve Layered",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Beautiful floral dress with puff sleeves and layered skirt",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "puff-sleeve",
+        "layered"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-dress-puff-sleeves-layered-skirt.png",
+      "firstCreatedDate": "2024-06-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 290
+    },
+    {
+      "name": "Beige and Black Handbag",
+      "price": 129.99,
+      "quantity": 45,
+      "description": "Elegant beige and black handbag with strap",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "beige",
+        "black"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beige-and-black-handbag-with-strap.png",
+      "firstCreatedDate": "2024-02-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 186
+    },
+    {
+      "name": "handbag_floral_pattern_white_handles",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Handbag with floral pattern and white handles",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "floral",
+        "white"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/handbag_floral_pattern_white_handles.png",
+      "firstCreatedDate": "2024-03-14T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 162
+    },
+    {
+      "name": "Grey High Heels",
+      "price": 109.99,
+      "quantity": 50,
+      "description": "Sophisticated grey high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "grey",
+        "elegant"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_grey-high-heels.png",
+      "firstCreatedDate": "2024-02-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 208
+    },
+    {
+      "name": "Black Handbag with Gold Accents",
+      "price": 189.99,
+      "quantity": 35,
+      "description": "Luxurious black handbag with gold accents",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "black",
+        "gold"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-handbag-with-gold-accents.png",
+      "firstCreatedDate": "2024-01-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 28
+    },
+    {
+      "name": "Perfume Gucci Bloom Perfume",
+      "price": 129.99,
+      "quantity": 40,
+      "description": "Gucci Bloom Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "gucci",
+        "bloom"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gucci-bloom-perfume.png",
+      "firstCreatedDate": "2024-04-04T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 54
+    },
+    {
+      "name": "Beige Lace Heels",
+      "price": 119.99,
+      "quantity": 45,
+      "description": "Delicate beige lace heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "beige",
+        "lace"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_beige-lace-heels.png",
+      "firstCreatedDate": "2024-02-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 268
+    },
+    {
+      "name": "Pearl Bow Earrings",
+      "price": 129.99,
+      "quantity": 45,
+      "description": "Elegant pearl bow earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "pearl",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pearl-bow-earrings.png",
+      "firstCreatedDate": "2024-03-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 73
+    },
+    {
+      "name": "Silver Star Ring",
+      "price": 119.99,
+      "quantity": 50,
+      "description": "Elegant silver star ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "silver",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver-star-ring.png",
+      "firstCreatedDate": "2024-04-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 116
+    },
+    {
+      "name": "White Blouse with Black Bow",
+      "price": 69.99,
+      "quantity": 50,
+      "description": "Classic white blouse with black bow detail",
+      "category": "Tops",
+      "tags": [
+        "blouse",
+        "white",
+        "black",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-blouse-with-black-bow.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 274
+    },
+    {
+      "name": "Silver Butterfly Ring",
+      "price": 139.99,
+      "quantity": 50,
+      "description": "Delicate silver butterfly ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "silver",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver-butterfly-ring.png",
+      "firstCreatedDate": "2024-04-12T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 97
+    },
+    {
+      "name": "Heart Shaped Earring Pair",
+      "price": 89.99,
+      "quantity": 50,
+      "description": "Elegant heart shaped earring pair",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/heart-shaped-earring-pair.png",
+      "firstCreatedDate": "2024-02-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 69
+    },
+    {
+      "name": "Chanel Coco Mademoiselle",
+      "price": 299.99,
+      "quantity": 30,
+      "description": "Luxurious Chanel perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "chanel",
+        "luxury"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/coco-mademoiselle_chanel_paris.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 172
+    },
+    {
+      "name": "Heels Sparkly",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "Sparkly high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "sparkly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_sparkly-high-heels.png",
+      "firstCreatedDate": "2024-05-08T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 88
+    },
+    {
+      "name": "Jeans Blue Cargo Wide-leg",
+      "price": 94.99,
+      "quantity": 35,
+      "description": "Trendy blue wide leg cargo jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "blue",
+        "cargo",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-wide-leg-cargo-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 70
+    },
+    {
+      "name": "Handbag Pink Chain Handbag",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Pink handbag with decorative chain",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "pink",
+        "chain"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-handbag-with-decorative-chain.png",
+      "firstCreatedDate": "2024-03-27T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 210
+    },
+    {
+      "name": "Giorgio Armani Si Passione",
+      "price": 129.99,
+      "quantity": 40,
+      "description": "Passionate and intense fragrance by Giorgio Armani",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "intense",
+        "luxury"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/fragrance_si-passione-giorgio-armani.png",
+      "firstCreatedDate": "2024-01-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 130
+    },
+    {
+      "name": "floral_dress_with_black_bow_straps",
+      "price": 99.99,
+      "quantity": 35,
+      "description": "Floral dress with black bow straps",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "black",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral_dress_with_black_bow_straps.png",
+      "firstCreatedDate": "2024-06-22T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 107
+    },
+    {
+      "name": "Dress Blue",
+      "price": 94.99,
+      "quantity": 40,
+      "description": "Classic blue dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "blue"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-dress.png",
+      "firstCreatedDate": "2024-06-09T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 47
+    },
+    {
+      "name": "Perfume Dior Pure-poison Perfume",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Pure Poison Perfume by Dior",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "dior",
+        "pure-poison"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_pure-poison_dior.png",
+      "firstCreatedDate": "2024-04-24T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 203
+    },
+    {
+      "name": "Ring with Floral Design",
+      "price": 159.99,
+      "quantity": 45,
+      "description": "Elegant ring with floral design",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/ring-floral-design.png",
+      "firstCreatedDate": "2024-04-04T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 4
+    },
+    {
+      "name": "Sneakers White Pink Tassel",
+      "price": 129.99,
+      "quantity": 35,
+      "description": "White sneakers with pink tassel",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "pink",
+        "tassel"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sneakers-white-pink-tassel.png",
+      "firstCreatedDate": "2024-05-21T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 292
+    },
+    {
+      "name": "Butterfly Bracelet",
+      "price": 24.99,
+      "quantity": 60,
+      "description": "Charming butterfly bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/butterfly-bracelet.png",
+      "firstCreatedDate": "2024-01-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 70
+    },
+    {
+      "name": "Perfume Giorgio-armani Si Perfume",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Giorgio Armani Si Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "giorgio-armani",
+        "si"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image_giorgio-armani-si-perfume.png",
+      "firstCreatedDate": "2024-04-12T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 17
+    },
+    {
+      "name": "Diamond Leaf Earrings",
+      "price": 179.99,
+      "quantity": 40,
+      "description": "Elegant diamond leaf earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "diamond",
+        "leaf"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/jewelry_diamond_leaf_earrings.png",
+      "firstCreatedDate": "2024-02-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 35
+    },
+    {
+      "name": "Perfume Victorias-secret Bombshell",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Victoria's Secret Bombshell Eau de Parfum",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "victorias-secret",
+        "bombshell",
+        "eau-de-parfum"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/victorias-secret-bombshell-eau-de-parfum.png",
+      "firstCreatedDate": "2024-04-27T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 69
+    },
+    {
+      "name": "Pants White Wide-leg",
+      "price": 84.99,
+      "quantity": 40,
+      "description": "Elegant white wide leg pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "white",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-wide-leg-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 255
+    },
+    {
+      "name": "Jeans Decorative Butterfly",
+      "price": 99.99,
+      "quantity": 35,
+      "description": "Decorative jeans with butterfly design",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "decorative",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/decorative-jeans-no-more-rules-butterfly-design.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 91
+    },
+    {
+      "name": "Dress Floral Black Puff-sleeve",
+      "price": 109.99,
+      "quantity": 35,
+      "description": "Elegant floral dress with black puff sleeves",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "black",
+        "puff-sleeve"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-dress-black-puff-sleeve.png",
+      "firstCreatedDate": "2024-06-14T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 14
+    },
+    {
+      "name": "Heels Sparkly Beige",
+      "price": 149.99,
+      "quantity": 30,
+      "description": "Sparkly beige high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "sparkly",
+        "beige"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sparkly-beige-high-heels.png.png",
+      "firstCreatedDate": "2024-05-26T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 178
+    },
+    {
+      "name": "Heels Red Suede",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Red suede high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "red",
+        "suede"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/red-suede-high-heels.png",
+      "firstCreatedDate": "2024-05-19T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 156
+    },
+    {
+      "name": "Butterfly Design Ring",
+      "price": 129.99,
+      "quantity": 40,
+      "description": "Charming butterfly design ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_butterfly-design-ring.png",
+      "firstCreatedDate": "2024-02-23T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 118
+    },
+    {
+      "name": "snake_pattern_handbag_with_charm",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Snake pattern handbag with charm",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "snake",
+        "pattern",
+        "charm"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/snake_pattern_handbag_with_charm.png",
+      "firstCreatedDate": "2024-04-02T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 290
+    },
+    {
+      "name": "Dress Floral Pattern",
+      "price": 94.99,
+      "quantity": 35,
+      "description": "Beautiful floral pattern dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "pattern"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_floral-pattern-dress.png",
+      "firstCreatedDate": "2024-07-26T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 240
+    },
+    {
+      "name": "Floral Dress Pattern",
+      "price": 89.99,
+      "quantity": 50,
+      "description": "Beautiful floral pattern dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "pattern"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-dress-pattern.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 176
+    },
+    {
+      "name": "Bracelet Moon and Stars",
+      "price": 29.99,
+      "quantity": 40,
+      "description": "Bracelet with moon and stars design",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "moon",
+        "stars"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/bracelet-moon-and-stars.png",
+      "firstCreatedDate": "2024-01-12T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 124
+    },
+    {
+      "name": "Bracelet Silver Stars Moon",
+      "price": 34.99,
+      "quantity": 30,
+      "description": "Silver bracelet with stars and moon",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "silver",
+        "stars",
+        "moon"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/bracelet_silver_stars_moon.png.png",
+      "firstCreatedDate": "2024-01-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 238
+    },
+    {
+      "name": "Black High Heels",
+      "price": 129.99,
+      "quantity": 40,
+      "description": "Classic black high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "black",
+        "classic"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-high-heels.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 90
+    },
+    {
+      "name": "Roller-skates Pink",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Pink roller skates",
+      "category": "Shoes",
+      "tags": [
+        "roller-skates",
+        "pink"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_pink-roller-skates.png",
+      "firstCreatedDate": "2024-05-06T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 51
+    },
+    {
+      "name": "Heels Sparkly Gold Silver",
+      "price": 159.99,
+      "quantity": 35,
+      "description": "Sparkly gold and silver stiletto heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "sparkly",
+        "gold",
+        "silver",
+        "stiletto"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_sparkly-gold-and-silver-stiletto-heels.png",
+      "firstCreatedDate": "2024-05-07T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 234
+    },
+    {
+      "name": "Jumpsuit Blue Embroidery",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Beautiful blue embroidery jumpsuit",
+      "category": "trousers",
+      "tags": [
+        "jumpsuit",
+        "blue",
+        "embroidery"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_blue-embroidery-jumpsuit.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 43
+    },
+    {
+      "name": "Pink Ring",
+      "price": 119.99,
+      "quantity": 50,
+      "description": "Charming pink ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "pink"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-ring.png",
+      "firstCreatedDate": "2024-04-02T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 86
+    },
+    {
+      "name": "Pandora Ring",
+      "price": 199.99,
+      "quantity": 40,
+      "description": "Classic Pandora ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "pandora"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pandora-ring.png",
+      "firstCreatedDate": "2024-03-23T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 188
+    },
+    {
+      "name": "Handbag Floral Chain Handbag",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Floral handbag with chain strap",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "floral",
+        "chain"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-handbag-with-chain-strap.png",
+      "firstCreatedDate": "2024-03-12T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 285
+    },
+    {
+      "name": "Perfume Burberry Eau-de-parfum Perfume",
+      "price": 129.99,
+      "quantity": 25,
+      "description": "Eau de Parfum Her by Burberry",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "burberry",
+        "eau-de-parfum"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_eau-de-parfum-her_burberry.png",
+      "firstCreatedDate": "2024-04-17T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 264
+    },
+    {
+      "name": "Backpack Brown Green Leather Handbag",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Brown and green leather backpack",
+      "category": "Bags",
+      "tags": [
+        "backpack",
+        "brown",
+        "green",
+        "leather"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_brown-green-leather-backpack.png",
+      "firstCreatedDate": "2024-03-21T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 181
+    },
+    {
+      "name": "Star Shaped Silver Bracelet",
+      "price": 149.99,
+      "quantity": 45,
+      "description": "Beautiful star shaped silver bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "silver",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/star-shaped-silver-bracelet.png",
+      "firstCreatedDate": "2024-04-26T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 24
+    },
+    {
+      "name": "Gold Floral Bracelet Chain",
+      "price": 79.99,
+      "quantity": 50,
+      "description": "Beautiful gold bracelet chain with floral details",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "gold",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gold-floral-bracelet-chain.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 80
+    },
+    {
+      "name": "Diamond Ring with Floral Design",
+      "price": 299.99,
+      "quantity": 30,
+      "description": "Stunning diamond ring with floral design",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "diamond",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_diamond-ring-with-floral-design.png",
+      "firstCreatedDate": "2024-03-03T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 245
+    },
+    {
+      "name": "Diamond Crown Ring",
+      "price": 199.99,
+      "quantity": 30,
+      "description": "Elegant diamond crown ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "diamond",
+        "crown"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/diamond-crown-ring.png",
+      "firstCreatedDate": "2024-01-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 19
+    },
+    {
+      "name": "Dress Green",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Classic green dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "green"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/green-dress.png",
+      "firstCreatedDate": "2024-06-23T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 226
+    },
+    {
+      "name": "Pants Green Wide-leg",
+      "price": 84.99,
+      "quantity": 40,
+      "description": "Elegant green wide leg pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "green",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/green-wide-leg-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 175
+    },
+    {
+      "name": "Pink Pearl Drop Earrings",
+      "price": 139.99,
+      "quantity": 45,
+      "description": "Delicate pink pearl drop earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "pink",
+        "pearl"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-pearl-drop-earrings.png",
+      "firstCreatedDate": "2024-03-31T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 237
+    },
+    {
+      "name": "sneakers_white_blue_flower_design",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "White sneakers with blue flower design",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "blue",
+        "flower"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sneakers_white_blue_flower_design.png",
+      "firstCreatedDate": "2024-05-24T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 76
+    },
+    {
+      "name": "Handbag Leather Black Handbag",
+      "price": 129.99,
+      "quantity": 40,
+      "description": "Classic black leather handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "leather",
+        "black"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-leather-handbag.png",
+      "firstCreatedDate": "2024-03-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 205
+    },
+    {
+      "name": "Jeans Positive-messages",
+      "price": 99.99,
+      "quantity": 30,
+      "description": "Unique jeans with positive messages",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "positive-messages"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_jeans_with_positive_messages.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 264
+    },
+    {
+      "name": "Heels White Strappy",
+      "price": 149.99,
+      "quantity": 30,
+      "description": "White strappy heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "white",
+        "strappy"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-strappy-heels.png",
+      "firstCreatedDate": "2024-06-01T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 179
+    },
+    {
+      "name": "purse_metallic_geometric_design",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Purse with metallic geometric design",
+      "category": "Bags",
+      "tags": [
+        "purse",
+        "metallic",
+        "geometric"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/purse_metallic_geometric_design.png",
+      "firstCreatedDate": "2024-03-31T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 297
+    },
+    {
+      "name": "Black Ruched Blouse",
+      "price": 79.99,
+      "quantity": 45,
+      "description": "Stylish black ruched blouse",
+      "category": "Tops",
+      "tags": [
+        "blouse",
+        "black",
+        "ruched"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-ruched-blouse.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 255
+    },
+    {
+      "name": "Dress Black Off-shoulder",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Stylish black off-shoulder dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "black",
+        "off-shoulder"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-off-shoulder-dress.png",
+      "firstCreatedDate": "2024-06-07T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 181
+    },
+    {
+      "name": "Gold Flower Ring",
+      "price": 129.99,
+      "quantity": 45,
+      "description": "Delicate gold flower ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "gold",
+        "flower"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gold-flower.png",
+      "firstCreatedDate": "2024-02-03T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 138
+    },
+    {
+      "name": "Jumpsuit Purple Bows",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Elegant purple jumpsuit with bows",
+      "category": "trousers",
+      "tags": [
+        "jumpsuit",
+        "purple",
+        "bows"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/purple-jumpsuit-with-bows.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 30
+    },
+    {
+      "name": "Sandals Spiral Strap",
+      "price": 129.99,
+      "quantity": 35,
+      "description": "Spiral strap sandals",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "spiral",
+        "strap"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/spiral-strap-sandals.png",
+      "firstCreatedDate": "2024-05-27T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 60
+    },
+    {
+      "name": "Heels White Bow",
+      "price": 129.99,
+      "quantity": 35,
+      "description": "White high heels with bow",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "white",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_white-high-heels-with-bow.png",
+      "firstCreatedDate": "2024-05-09T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 49
+    },
+    {
+      "name": "Dress Black Long-sleeve",
+      "price": 99.99,
+      "quantity": 35,
+      "description": "Classic black long sleeve dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "black",
+        "long-sleeve"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-long-sleeve-dress.png",
+      "firstCreatedDate": "2024-06-05T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 106
+    },
+    {
+      "name": "Perfume Midnight Poison Perfume",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "Midnight Poison Perfume Bottle",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "midnight",
+        "poison"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/midnight-poison-perfume-bottle.png",
+      "firstCreatedDate": "2024-04-06T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 82
+    },
+    {
+      "name": "Trousers Black Wide-leg Gold-buttons",
+      "price": 109.99,
+      "quantity": 35,
+      "description": "Elegant black wide leg trousers with gold buttons",
+      "category": "trousers",
+      "tags": [
+        "trousers",
+        "black",
+        "wide-leg",
+        "gold-buttons"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image_black-wide-leg-trousers-with-gold-buttons.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 118
+    },
+    {
+      "name": "Butterfly Rings Set",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Beautiful set of butterfly rings",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "butterfly",
+        "set"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_butterfly-rings.png",
+      "firstCreatedDate": "2024-02-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 240
+    },
+    {
+      "name": "Swan Pendant",
+      "price": 169.99,
+      "quantity": 40,
+      "description": "Elegant swan pendant",
+      "category": "Accessories",
+      "tags": [
+        "pendant",
+        "swan"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/swan-pendant.png",
+      "firstCreatedDate": "2024-04-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 203
+    },
+    {
+      "name": "Perfume Miss-dior Absolutely-blooming",
+      "price": 159.99,
+      "quantity": 30,
+      "description": "Miss Dior Absolutely Blooming Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "miss-dior",
+        "absolutely-blooming"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_miss-dior-absolutely-blooming.png",
+      "firstCreatedDate": "2024-04-22T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 189
+    },
+    {
+      "name": "product_image_silver_glitter_high_heels",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Silver glitter high heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "silver",
+        "glitter"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_image_silver_glitter_high_heels.png",
+      "firstCreatedDate": "2024-05-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 177
+    },
+    {
+      "name": "Perfume Chanel Chance Eau-tendre Perfume",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "Chanel Chance Eau Tendre Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "chanel",
+        "chance",
+        "eau-tendre"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image_chanel-chance-eau-tendre.png",
+      "firstCreatedDate": "2024-04-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 69
+    },
+    {
+      "name": "Jeans Black Wide-leg",
+      "price": 94.99,
+      "quantity": 40,
+      "description": "Classic black wide leg jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "black",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-wide-leg-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 9
+    },
+    {
+      "name": "Jeans Denim Blue Black",
+      "price": 94.99,
+      "quantity": 35,
+      "description": "Stylish denim jeans with blue and black bows",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "denim",
+        "blue",
+        "black",
+        "bows"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/denim-jeans-blue-black-bows.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 181
+    },
+    {
+      "name": "Floral White Blue Dress",
+      "price": 99.99,
+      "quantity": 40,
+      "description": "Elegant floral dress in white and blue",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "white",
+        "blue"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-white-blue-dress.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 112
+    },
+    {
+      "name": "Cloud Shaped Gold Necklace with Gems",
+      "price": 199.99,
+      "quantity": 30,
+      "description": "Unique cloud shaped gold necklace with gems",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "gold",
+        "cloud",
+        "gems"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_cloud-shaped-gold-necklace-with-gems.png",
+      "firstCreatedDate": "2024-02-27T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 112
+    },
+    {
+      "name": "Heels Beige Floral",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Beige floral high heel shoes",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "beige",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beige-floral-high-heel-shoes.png",
+      "firstCreatedDate": "2024-04-30T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 202
+    },
+    {
+      "name": "Jeans Blue Wide-leg",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Classic blue wide leg jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "blue",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-wide-leg-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 31
+    },
+    {
+      "name": "Heart Pendant",
+      "price": 159.99,
+      "quantity": 40,
+      "description": "Beautiful heart pendant",
+      "category": "Accessories",
+      "tags": [
+        "pendant",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/heart-pendant.png",
+      "firstCreatedDate": "2024-02-09T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 200
+    },
+    {
+      "name": "Sneakers Puma Heart",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Sneaker with Puma heart pattern",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "puma",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sneaker-puma-heart-pattern.png",
+      "firstCreatedDate": "2024-05-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 41
+    },
+    {
+      "name": "Trousers Grey Wide-leg",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Classic grey wide leg trousers",
+      "category": "trousers",
+      "tags": [
+        "trousers",
+        "grey",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/wide_leg_trousers_grey.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 212
+    },
+    {
+      "name": "handbag_gray_flower_embroidery",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Gray handbag with flower embroidery",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "gray",
+        "flower",
+        "embroidery"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/handbag_gray_flower_embroidery.png",
+      "firstCreatedDate": "2024-03-16T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 91
+    },
+    {
+      "name": "Sandals Ankle-strap Beige Block-heel",
+      "price": 129.99,
+      "quantity": 40,
+      "description": "Ankle strap sandals with beige block heel",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "ankle-strap",
+        "beige",
+        "block-heel"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/ankle-strap-sandals-beige-block-heel.png",
+      "firstCreatedDate": "2024-04-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 223
+    },
+    {
+      "name": "handbag_flower_pattern_blue_white_prada",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Handbag with blue and white flower pattern (Prada)",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "flower",
+        "blue",
+        "white",
+        "prada"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/handbag_flower_pattern_blue_white_prada.png",
+      "firstCreatedDate": "2024-03-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 229
+    },
+    {
+      "name": "Heart Shaped Black Stone Ring",
+      "price": 149.99,
+      "quantity": 40,
+      "description": "Stunning heart shaped ring with black stone",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "heart",
+        "black-stone"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_heart-shaped-black-stone-ring.png",
+      "firstCreatedDate": "2024-01-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 104
+    },
+    {
+      "name": "Sandals White High-heel",
+      "price": 129.99,
+      "quantity": 35,
+      "description": "White high heel sandals",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "white",
+        "high-heel"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image-white-high-heel-sandals.png",
+      "firstCreatedDate": "2024-05-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 189
+    },
+    {
+      "name": "handbag_white_flower_embroidery",
+      "price": 129.99,
+      "quantity": 25,
+      "description": "White handbag with flower embroidery",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "white",
+        "flower",
+        "embroidery"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/handbag_white_flower_embroidery.png",
+      "firstCreatedDate": "2024-03-19T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 186
+    },
+    {
+      "name": "Saturn Moon Star Necklaces",
+      "price": 189.99,
+      "quantity": 40,
+      "description": "Unique Saturn moon star necklaces",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "saturn",
+        "moon",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/saturn-moon-star-necklaces.png",
+      "firstCreatedDate": "2024-04-08T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 279
+    },
+    {
+      "name": "sneakers_black_pink_fashionsport_smiley",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "Black and pink sneakers with smiley design",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "black",
+        "pink",
+        "smiley"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sneakers_black_pink_fashionsport_smiley.png",
+      "firstCreatedDate": "2024-05-22T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 100
+    },
+    {
+      "name": "Sneakers White Pink",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "White sneakers with pink accents",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "pink"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_white-sneakers-with-pink-accents.png",
+      "firstCreatedDate": "2024-05-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 23
+    },
+    {
+      "name": "Dress Floral",
+      "price": 94.99,
+      "quantity": 40,
+      "description": "Classic floral dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-dress.png",
+      "firstCreatedDate": "2024-06-18T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 269
+    },
+    {
+      "name": "Silver Heart Necklace",
+      "price": 149.99,
+      "quantity": 45,
+      "description": "Elegant silver heart necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "silver",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver-heart-necklace.png.png",
+      "firstCreatedDate": "2024-04-14T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 20
+    },
+    {
+      "name": "Pink Flower Pendant Necklace",
+      "price": 149.99,
+      "quantity": 45,
+      "description": "Delicate pink flower pendant necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "pink",
+        "flower",
+        "pendant"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_pink_flower_pendant_necklace.png",
+      "firstCreatedDate": "2024-03-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 86
+    },
+    {
+      "name": "Jeans Blue Cargo Utility",
+      "price": 99.99,
+      "quantity": 40,
+      "description": "Practical blue utility cargo jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "blue",
+        "cargo",
+        "utility"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-utility-cargo-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 184
+    },
+    {
+      "name": "star_shaped_perfume_bottle",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Star Shaped Perfume Bottle",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "star",
+        "bottle"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/star_shaped_perfume_bottle.png",
+      "firstCreatedDate": "2024-04-26T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 45
+    },
+    {
+      "name": "Blouse Floral Embroidered",
+      "price": 79.99,
+      "quantity": 50,
+      "description": "Beautiful floral embroidered blouse",
+      "category": "Tops",
+      "tags": [
+        "blouse",
+        "floral",
+        "embroidered"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-embroidered-blouse.png",
+      "firstCreatedDate": "2024-06-19T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 0
+    },
+    {
+      "name": "Dress Blue White Toile-print",
+      "price": 99.99,
+      "quantity": 35,
+      "description": "Beautiful blue and white toile print dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "blue",
+        "white",
+        "toile-print"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/dress_blue-white-toile-print.png",
+      "firstCreatedDate": "2024-06-12T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 123
+    },
+    {
+      "name": "Daisy Marc Jacobs",
+      "price": 89.99,
+      "quantity": 45,
+      "description": "Fresh and floral Daisy perfume by Marc Jacobs",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "floral",
+        "fresh"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/daisy_marc-jacobs.png",
+      "firstCreatedDate": "2024-02-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 252
+    },
+    {
+      "name": "productimage_whitehandbag",
+      "price": 109.99,
+      "quantity": 25,
+      "description": "White handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "white"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/productimage_whitehandbag.png",
+      "firstCreatedDate": "2024-03-29T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 294
+    },
+    {
+      "name": "Tiara Ring",
+      "price": 179.99,
+      "quantity": 40,
+      "description": "Elegant tiara ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "tiara"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/photo_tiara_ring.png",
+      "firstCreatedDate": "2024-03-29T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 73
+    },
+    {
+      "name": "Jeans High-waisted Flare",
+      "price": 94.99,
+      "quantity": 40,
+      "description": "Stylish high-waisted flare jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "high-waisted",
+        "flare"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/productimage_highwaistedflarejeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 186
+    },
+    {
+      "name": "Gem Display",
+      "price": 89.99,
+      "quantity": 45,
+      "description": "Beautiful gem display piece",
+      "category": "Accessories",
+      "tags": [
+        "gem",
+        "display",
+        "decorative"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gem-display.png",
+      "firstCreatedDate": "2024-01-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 76
+    },
+    {
+      "name": "Pink Dress Floral Embroidery",
+      "price": 119.99,
+      "quantity": 35,
+      "description": "Beautiful pink dress with floral embroidery",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "pink",
+        "floral",
+        "embroidery"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-dress-floral-embroidery.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 260
+    },
+    {
+      "name": "Perfume Bottle Perfume",
+      "price": 109.99,
+      "quantity": 25,
+      "description": "Perfume Bottle",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "bottle"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/perfume-bottle.png",
+      "firstCreatedDate": "2024-04-07T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 294
+    },
+    {
+      "name": "Perfume Lollia Rose Perfume",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Perfume Number 39 Lollia Always in Rose",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "lollia",
+        "rose"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/perfume_number-39-lollia-always-in-rose.png",
+      "firstCreatedDate": "2024-04-08T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 151
+    },
+    {
+      "name": "Perfume Vera-wang Princess Perfume",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Vera Wang Princess Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "vera-wang",
+        "princess"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/perfume_vera-wang-princess.png",
+      "firstCreatedDate": "2024-04-09T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 265
+    },
+    {
+      "name": "Sandals White High-heel Strappy",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "White high heeled strappy sandals",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "white",
+        "high-heel",
+        "strappy"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-high-heeled-strappy-sandals.png",
+      "firstCreatedDate": "2024-05-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 95
+    },
+    {
+      "name": "Handbag Gray Handbag",
+      "price": 109.99,
+      "quantity": 25,
+      "description": "Gray handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "gray"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_gray-handbag.png",
+      "firstCreatedDate": "2024-03-22T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 259
+    },
+    {
+      "name": "Heart Shaped Bracelet",
+      "price": 139.99,
+      "quantity": 45,
+      "description": "Charming heart shaped bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/heart-shaped-bracelet.png",
+      "firstCreatedDate": "2024-02-11T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 161
+    },
+    {
+      "name": "Sandals White Heels",
+      "price": 129.99,
+      "quantity": 35,
+      "description": "Women's white heeled sandals",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "white",
+        "heels"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/women-white-heeled-sandals.png",
+      "firstCreatedDate": "2024-06-02T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 69
+    },
+    {
+      "name": "Sandals Black High-heel",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Black high heel sandals",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "black",
+        "high-heel"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-high-heel-sandals.png",
+      "firstCreatedDate": "2024-05-02T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 137
+    },
+    {
+      "name": "Silver Necklace with Blue Gemstones",
+      "price": 159.99,
+      "quantity": 50,
+      "description": "Elegant silver necklace with blue gemstones",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "silver",
+        "blue",
+        "gemstones"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/jewelry_silver-necklace-with-blue-gemstones.png",
+      "firstCreatedDate": "2024-03-21T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 8
+    },
+    {
+      "name": "Perfume Ghost Whitelight",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Ghost Whitelight Eau de Toilette",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "ghost",
+        "whitelight",
+        "eau-de-toilette"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_ghost-whitelight-eau-de-toilette.png",
+      "firstCreatedDate": "2024-04-18T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 182
+    },
+    {
+      "name": "Handbag Floral Green Bow Handbag",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Floral green handbag with bow detail",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "floral",
+        "green",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-green-handbag-bow-detail.png",
+      "firstCreatedDate": "2024-03-11T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 117
+    },
+    {
+      "name": "Top Green Ruched",
+      "price": 69.99,
+      "quantity": 45,
+      "description": "Stylish green ruched top",
+      "category": "Tops",
+      "tags": [
+        "top",
+        "green",
+        "ruched"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/green-ruched-top.png",
+      "firstCreatedDate": "2024-06-24T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 263
+    },
+    {
+      "name": "Silver Hoop Star Earrings",
+      "price": 99.99,
+      "quantity": 55,
+      "description": "Charming silver hoop star earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "silver",
+        "hoop",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver-hoop-star-earrings.png",
+      "firstCreatedDate": "2024-04-16T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 81
+    },
+    {
+      "name": "Silver Star Hanging Earrings",
+      "price": 129.99,
+      "quantity": 50,
+      "description": "Elegant silver star hanging earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "silver",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver_star_hanging_earrings.png",
+      "firstCreatedDate": "2024-04-24T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 221
+    },
+    {
+      "name": "Handbag Purple Butterfly Charm Handbag",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Purple handbag with butterfly charm",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "purple",
+        "butterfly",
+        "charm"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_purple-handbag-butterfly-charm.png",
+      "firstCreatedDate": "2024-03-24T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.7,
+      "ratingsQuantity": 224
+    },
+    {
+      "name": "Vine Leaf Ring Gold with Green Gems",
+      "price": 199.99,
+      "quantity": 35,
+      "description": "Unique vine leaf ring in gold with green gems",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "gold",
+        "vine",
+        "leaf",
+        "green",
+        "gems"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/vine-leaf-ring-gold-with-green-gems.png",
+      "firstCreatedDate": "2024-04-30T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 115
+    },
+    {
+      "name": "Heels Badgley-mischka Embellished",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Badgley Mischka embellished heels",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "badgley-mischka",
+        "embellished"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/badgley-mischka-embellished-heels.png",
+      "firstCreatedDate": "2024-04-29T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 220
+    },
+    {
+      "name": "Gold Ring with Diamonds",
+      "price": 279.99,
+      "quantity": 35,
+      "description": "Luxurious gold ring with diamonds",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "gold",
+        "diamonds"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_gold-ring-with-diamonds.png",
+      "firstCreatedDate": "2024-03-07T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 22
+    },
+    {
+      "name": "Cream Embellished Handbag",
+      "price": 129.99,
+      "quantity": 45,
+      "description": "Elegant cream handbag with embellishments",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "cream",
+        "embellished"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/cream-embellished-handbag.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 195
+    },
+    {
+      "name": "Gold Bracelet with Blue Gem",
+      "price": 189.99,
+      "quantity": 40,
+      "description": "Elegant gold bracelet with blue gem",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "gold",
+        "blue",
+        "gem"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_gold-bracelet-with-blue-gem.png",
+      "firstCreatedDate": "2024-03-05T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 221
+    },
+    {
+      "name": "Heels Pink Decorative Straps",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "Pink high heels with decorative straps",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "pink",
+        "decorative",
+        "straps"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pink-high-heels-with-decorative-straps.png",
+      "firstCreatedDate": "2024-05-12T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 86
+    },
+    {
+      "name": "Perfume Prada Paradoxe Perfume",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Prada Paradoxe Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "prada",
+        "paradoxe"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_prada-paradoxe-perfume.png",
+      "firstCreatedDate": "2024-04-23T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 229
+    },
+    {
+      "name": "Sneakers White Sports",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "White sneakers sports shoes",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "sports"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-sneakers-sports-shoes.png.png",
+      "firstCreatedDate": "2024-05-31T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 286
+    },
+    {
+      "name": "Blouse Floral Puff-sleeve",
+      "price": 84.99,
+      "quantity": 40,
+      "description": "Elegant floral puff sleeve blouse",
+      "category": "Tops",
+      "tags": [
+        "blouse",
+        "floral",
+        "puff-sleeve"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-puff-sleeve-blouse.png",
+      "firstCreatedDate": "2024-06-21T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 220
+    },
+    {
+      "name": "Gold Bracelet with Butterfly Design",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Elegant gold bracelet with butterfly design",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "gold",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gold-bracelet-with-butterfly-design.png",
+      "firstCreatedDate": "2024-01-30T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 277
+    },
+    {
+      "name": "Grey Wide Leg Trousers",
+      "price": 79.99,
+      "quantity": 50,
+      "description": "Classic grey wide leg trousers",
+      "category": "trousers",
+      "tags": [
+        "trousers",
+        "grey",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/grey-wide-leg-trousers.png",
+      "firstCreatedDate": "2024-02-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 297
+    },
+    {
+      "name": "Heels Sparkly Blue",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Sparkly blue high heel shoes",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "sparkly",
+        "blue"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/photograph_sparkly-blue-high-heel-shoes.png",
+      "firstCreatedDate": "2024-05-11T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 113
+    },
+    {
+      "name": "Crescent Moon Star Earrings",
+      "price": 34.99,
+      "quantity": 40,
+      "description": "Earrings with crescent moon and star design",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "crescent",
+        "moon",
+        "star"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/crescent-moon-star-earrings.png",
+      "firstCreatedDate": "2024-01-24T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 177
+    },
+    {
+      "name": "Sneakers White Rose Embroidery",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "White sneakers with rose embroidery",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "rose",
+        "embroidery"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-sneakers-rose-embroidery.png",
+      "firstCreatedDate": "2024-05-30T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 71
+    },
+    {
+      "name": "High Heel Shoe with Bow",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Elegant high heel shoe with decorative bow",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "bow",
+        "elegant"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/high-heel-shoe-with-bow.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 136
+    },
+    {
+      "name": "Jewelry Heart Shaped Necklace",
+      "price": 169.99,
+      "quantity": 45,
+      "description": "Beautiful heart shaped necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/jewelry_heart-shaped-necklace.png",
+      "firstCreatedDate": "2024-03-19T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 72
+    },
+    {
+      "name": "Overalls Checkered",
+      "price": 84.99,
+      "quantity": 35,
+      "description": "Stylish checkered overalls",
+      "category": "trousers",
+      "tags": [
+        "overalls",
+        "checkered"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/checkered-overalls.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 265
+    },
+    {
+      "name": "handbag_white_butterfly_design",
+      "price": 139.99,
+      "quantity": 30,
+      "description": "White handbag with butterfly design",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "white",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/handbag_white_butterfly_design.png",
+      "firstCreatedDate": "2024-03-18T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 253
+    },
+    {
+      "name": "Heels Transparent Floral",
+      "price": 149.99,
+      "quantity": 30,
+      "description": "Transparent heels with floral design",
+      "category": "Shoes",
+      "tags": [
+        "heels",
+        "transparent",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_transparent-heels-with-floral-design.png",
+      "firstCreatedDate": "2024-05-18T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 29
+    },
+    {
+      "name": "burgundy_cocktail_dress_sleeveless",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Elegant burgundy sleeveless cocktail dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "burgundy",
+        "cocktail",
+        "sleeveless"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/burgundy_cocktail_dress_sleeveless.png",
+      "firstCreatedDate": "2024-06-11T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 121
+    },
+    {
+      "name": "Silver Ring with Purple Stones",
+      "price": 159.99,
+      "quantity": 40,
+      "description": "Beautiful silver ring with purple stones",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "silver",
+        "purple"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/silver-ring-with-purple-stones.png",
+      "firstCreatedDate": "2024-04-18T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 5.0,
+      "ratingsQuantity": 105
+    },
+    {
+      "name": "handbag_purple_flower",
+      "price": 119.99,
+      "quantity": 25,
+      "description": "Purple handbag with flower design",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "purple",
+        "flower"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/handbag_purple_flower.png",
+      "firstCreatedDate": "2024-03-17T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 40
+    },
+    {
+      "name": "Winged Necklace Heart Pendant",
+      "price": 179.99,
+      "quantity": 40,
+      "description": "Elegant winged necklace with heart pendant",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "wings",
+        "heart",
+        "pendant"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/winged-necklace-heart-pendant.png",
+      "firstCreatedDate": "2024-05-02T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 56
+    },
+    {
+      "name": "Handbag Pastel Flower Handbag",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Pastel color handbag with flower",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "pastel",
+        "flower"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/pastel-color-handbag-with-flower.png",
+      "firstCreatedDate": "2024-03-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 156
+    },
+    {
+      "name": "Golden Butterfly Necklace",
+      "price": 189.99,
+      "quantity": 35,
+      "description": "Elegant golden butterfly necklace",
+      "category": "Accessories",
+      "tags": [
+        "necklace",
+        "gold",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/golden-butterfly-necklace.png.png",
+      "firstCreatedDate": "2024-02-07T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 111
+    },
+    {
+      "name": "Diamond Bow Earrings",
+      "price": 179.99,
+      "quantity": 40,
+      "description": "Elegant diamond bow earrings",
+      "category": "Accessories",
+      "tags": [
+        "earrings",
+        "diamond",
+        "bow"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_diamond-bow-earrings.png",
+      "firstCreatedDate": "2024-02-29T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 103
+    },
+    {
+      "name": "Bracelet with Diamonds",
+      "price": 49.99,
+      "quantity": 25,
+      "description": "Elegant bracelet with diamonds",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "diamonds"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/bracelet_with_diamonds.png.png",
+      "firstCreatedDate": "2024-01-18T00:00:00.000Z",
+      "NumOfSales": 0,
+      "discount": 15,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 1
+    },
+    {
+      "name": "Gold Heart Ring",
+      "price": 129.99,
+      "quantity": 45,
+      "description": "Elegant gold heart ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "gold",
+        "heart"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gold-heart-ring.png",
+      "firstCreatedDate": "2024-02-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 264
+    },
+    {
+      "name": "Jumpsuit Black Strapless",
+      "price": 109.99,
+      "quantity": 35,
+      "description": "Elegant black strapless jumpsuit",
+      "category": "trousers",
+      "tags": [
+        "jumpsuit",
+        "black",
+        "strapless"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-strapless-jumpsuit.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.9,
+      "ratingsQuantity": 274
+    },
+    {
+      "name": "Handbag White Floral Embroidery Handbag",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "White handbag with floral embroidery",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "white",
+        "floral",
+        "embroidery"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_white-handbag-with-floral-embroidery.png",
+      "firstCreatedDate": "2024-03-30T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.5,
+      "ratingsQuantity": 277
+    },
+    {
+      "name": "Sneakers Blue Glitter",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Blue sneakers with glitter",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "blue",
+        "glitter"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-sneakers-with-glitter.png",
+      "firstCreatedDate": "2024-05-04T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 189
+    },
+    {
+      "name": "White Wide Leg Pants",
+      "price": 69.99,
+      "quantity": 45,
+      "description": "Elegant white wide leg pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "white",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-wide-leg-pants.png",
+      "firstCreatedDate": "2024-02-10T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 137
+    },
+    {
+      "name": "Jeans High-waisted Wide-leg",
+      "price": 94.99,
+      "quantity": 35,
+      "description": "Stylish high-waisted wide leg jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "high-waisted",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_high-waisted-wide-leg-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 136
+    },
+    {
+      "name": "Red Off Shoulder Dress",
+      "price": 109.99,
+      "quantity": 40,
+      "description": "Elegant red off-shoulder dress",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "red",
+        "off-shoulder"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/red-off-shoulder-dress.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 140
+    },
+    {
+      "name": "Perfume Gucci Intense-oud Perfume",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Gucci Intense Oud Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "gucci",
+        "intense-oud"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_gucci-intense-oud.png",
+      "firstCreatedDate": "2024-04-21T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 233
+    },
+    {
+      "name": "Overalls White Floral",
+      "price": 94.99,
+      "quantity": 35,
+      "description": "Charming white floral overalls",
+      "category": "trousers",
+      "tags": [
+        "overalls",
+        "white",
+        "floral"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-floral-overalls.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 30
+    },
+    {
+      "name": "Pants Black White Wide-leg",
+      "price": 89.99,
+      "quantity": 35,
+      "description": "Stylish black wide leg pants with white designs",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "black",
+        "white",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-wide-leg-pants-with-white-designs.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 135
+    },
+    {
+      "name": "Black Wide Leg Jeans",
+      "price": 89.99,
+      "quantity": 45,
+      "description": "Stylish black wide leg jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "black",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-wide-leg-jeans.png.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.7,
+      "ratingsQuantity": 188
+    },
+    {
+      "name": "Blouse Black Wrap",
+      "price": 79.99,
+      "quantity": 45,
+      "description": "Elegant black wrap blouse",
+      "category": "Tops",
+      "tags": [
+        "blouse",
+        "black",
+        "wrap"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-wrap-blouse.png",
+      "firstCreatedDate": "2024-06-08T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 82
+    },
+    {
+      "name": "Jumpsuit Brown Floral Corduroy",
+      "price": 109.99,
+      "quantity": 30,
+      "description": "Unique brown floral corduroy jumpsuit",
+      "category": "trousers",
+      "tags": [
+        "jumpsuit",
+        "brown",
+        "floral",
+        "corduroy"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/clothing_brown-floral-corduroy-jumpsuit.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 268
+    },
+    {
+      "name": "Heart Stars Jewelry",
+      "price": 119.99,
+      "quantity": 40,
+      "description": "Beautiful heart and stars jewelry piece",
+      "category": "Accessories",
+      "tags": [
+        "jewelry",
+        "heart",
+        "stars"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/heart-stars.png",
+      "firstCreatedDate": "2024-02-17T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 92
+    },
+    {
+      "name": "Handbag Black Handbag",
+      "price": 119.99,
+      "quantity": 30,
+      "description": "Classic black handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "black"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_black-handbag.png",
+      "firstCreatedDate": "2024-03-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 180
+    },
+    {
+      "name": "Trousers Beige Wide-leg",
+      "price": 84.99,
+      "quantity": 40,
+      "description": "Elegant beige wide leg trousers",
+      "category": "trousers",
+      "tags": [
+        "trousers",
+        "beige",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beige-wide-leg-trousers.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 154
+    },
+    {
+      "name": "Perfume Valentino Donna-born-in-roma",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Valentino Donna Born in Roma Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "valentino",
+        "donna-born-in-roma"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_valentino-donna-born-in-roma-perfume.png",
+      "firstCreatedDate": "2024-04-25T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 45
+    },
+    {
+      "name": "Jeans Black Cargo Star-patch",
+      "price": 99.99,
+      "quantity": 30,
+      "description": "Trendy black cargo jeans with star patch",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "black",
+        "cargo",
+        "star-patch"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-star-patch-cargo-jeans.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 155
+    },
+    {
+      "name": "Pants White Flared",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Classic white flared pants",
+      "category": "trousers",
+      "tags": [
+        "pants",
+        "white",
+        "flared"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-flared-pants.png",
+      "firstCreatedDate": "2024-07-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.4,
+      "ratingsQuantity": 269
+    },
+    {
+      "name": "Blouse Beige Choker Long-sleeve",
+      "price": 89.99,
+      "quantity": 40,
+      "description": "Elegant beige blouse with choker collar and long sleeves",
+      "category": "Tops",
+      "tags": [
+        "blouse",
+        "beige",
+        "choker",
+        "long-sleeve"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/beige-blouse-with-choker-collar-long-sleeves.png",
+      "firstCreatedDate": "2024-06-04T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 46
+    },
+    {
+      "name": "Gold Ring with Leaf Design and Diamonds",
+      "price": 249.99,
+      "quantity": 30,
+      "description": "Stunning gold ring with leaf design and diamonds",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "gold",
+        "leaf",
+        "diamonds"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gold-ring-leaf-design-diamonds.png",
+      "firstCreatedDate": "2024-02-05T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.2,
+      "ratingsQuantity": 7
+    },
+    {
+      "name": "sneakers_pink_cat_design",
+      "price": 149.99,
+      "quantity": 35,
+      "description": "Pink sneakers with cat design",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "pink",
+        "cat"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/sneakers_pink_cat_design.png",
+      "firstCreatedDate": "2024-05-23T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 5
+    },
+    {
+      "name": "Heart Shaped Gemstone Ring",
+      "price": 169.99,
+      "quantity": 35,
+      "description": "Stunning heart shaped gemstone ring",
+      "category": "Accessories",
+      "tags": [
+        "ring",
+        "heart",
+        "gemstone"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/heart-shaped-gemstone-ring.png",
+      "firstCreatedDate": "2024-02-15T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 215
+    },
+    {
+      "name": "Dress Floral Puff-sleeve",
+      "price": 99.99,
+      "quantity": 40,
+      "description": "Charming floral dress with puff sleeves",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "puff-sleeve"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-dress-puff-sleeves.png",
+      "firstCreatedDate": "2024-06-16T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.0,
+      "ratingsQuantity": 238
+    },
+    {
+      "name": "Gold Butterfly Bracelet",
+      "price": 159.99,
+      "quantity": 45,
+      "description": "Beautiful gold butterfly bracelet",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "gold",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/image_gold_butterfly_bracelet.png",
+      "firstCreatedDate": "2024-03-09T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.6,
+      "ratingsQuantity": 257
+    },
+    {
+      "name": "Dress Floral White Pink",
+      "price": 89.99,
+      "quantity": 45,
+      "description": "Delicate floral dress in white and pink",
+      "category": "Tops",
+      "tags": [
+        "dress",
+        "floral",
+        "white",
+        "pink"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/floral-dress-white-pink.png",
+      "firstCreatedDate": "2024-06-17T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 28
+    },
+    {
+      "name": "Satchel Brown Leather Handbag",
+      "price": 129.99,
+      "quantity": 30,
+      "description": "Brown leather satchel bag",
+      "category": "Bags",
+      "tags": [
+        "satchel",
+        "brown",
+        "leather"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product-image_brown-leather-satchel-bag.png",
+      "firstCreatedDate": "2024-03-28T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.5,
+      "ratingsQuantity": 261
+    },
+    {
+      "name": "Butterfly Bracelet Alt",
+      "price": 24.99,
+      "quantity": 60,
+      "description": "Charming butterfly bracelet alt",
+      "category": "Accessories",
+      "tags": [
+        "bracelet",
+        "butterfly"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/butterfly_bracelet.png",
+      "firstCreatedDate": "2024-01-22T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.6,
+      "ratingsQuantity": 12
+    },
+    {
+      "name": "Perfume Dolce-gabbana The-only-one",
+      "price": 159.99,
+      "quantity": 30,
+      "description": "Dolce & Gabbana The Only One Perfume",
+      "category": "Perfumes",
+      "tags": [
+        "perfume",
+        "dolce-gabbana",
+        "the-only-one"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/product_dolce-gabbana-the-only-one-perfume.png",
+      "firstCreatedDate": "2024-04-16T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.8,
+      "ratingsQuantity": 261
+    },
+    {
+      "name": "Blue Wide Leg Cargo Jeans",
+      "price": 99.99,
+      "quantity": 40,
+      "description": "Trendy blue wide leg cargo jeans",
+      "category": "trousers",
+      "tags": [
+        "jeans",
+        "blue",
+        "cargo",
+        "wide-leg"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/blue-wide-leg-cargo-jeans.png",
+      "firstCreatedDate": "2024-02-20T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.3,
+      "ratingsQuantity": 229
+    },
+    {
+      "name": "Sandals Black Suede High-heel",
+      "price": 139.99,
+      "quantity": 35,
+      "description": "Black suede high heel sandals",
+      "category": "Shoes",
+      "tags": [
+        "sandals",
+        "black",
+        "suede",
+        "high-heel"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/black-suede-high-heel-sandals.png",
+      "firstCreatedDate": "2024-05-03T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.9,
+      "ratingsQuantity": 30
+    },
+    {
+      "name": "Handbag Gray Plaid Handbag",
+      "price": 109.99,
+      "quantity": 25,
+      "description": "Gray plaid handbag",
+      "category": "Bags",
+      "tags": [
+        "handbag",
+        "gray",
+        "plaid"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/gray-plaid-handbag.png",
+      "firstCreatedDate": "2024-03-13T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 3.8,
+      "ratingsQuantity": 43
+    },
+    {
+      "name": "Sneakers White High-top",
+      "price": 119.99,
+      "quantity": 35,
+      "description": "White high top sneakers",
+      "category": "Shoes",
+      "tags": [
+        "sneakers",
+        "white",
+        "high-top"
+      ],
+      "mainImage": "https://res.cloudinary.com/dcpgfzoia/image/upload/v1746817132/fashion-images/ProductImages/white-high-top-sneakers.png",
+      "firstCreatedDate": "2024-05-29T00:00:00.000Z",
+      "NumOfSales": 0,
+      "ratingsAverage": 4.1,
+      "ratingsQuantity": 125
+    }
+  ]
+}

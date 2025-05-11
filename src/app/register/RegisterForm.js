@@ -11,14 +11,15 @@ import Snackbar from "@mui/material/Snackbar";
 import Alert from "@mui/material/Alert";
 import CustomInput from "../../Components/CustomInput";
 import HighlightOffIcon from "@mui/icons-material/HighlightOff";
-import CircularLoading from "@/Components/Loader";
 import { passwordCriteria } from "@/utils/criteria";
 import { validateImage } from "@/utils/utilFunctions";
 import { signup } from "../actions";
+import GoogleProvider from "@/Components/Google Provider";
+import { useGlobalLoading } from "@/context/loadingContext";
 
 const SignUpForm = () => {
+  const { setIsLoading } = useGlobalLoading();
   const [showPassword, setShowPassword] = useState(false);
-
   const [image, setImage] = useState("");
   const [warning, setWarning] = useState(false);
   const [error, setError] = useState("");
@@ -38,6 +39,7 @@ const SignUpForm = () => {
   };
   const onSubmit = async (data) => {
     try {
+      setIsLoading(true);
       const formData = new FormData();
       formData.append("name", data.name);
       formData.append("email", data.email);
@@ -52,6 +54,7 @@ const SignUpForm = () => {
     } catch (error) {
       setError(error.message);
     }
+    setIsLoading(false);
   };
 
   return (
@@ -172,7 +175,11 @@ const SignUpForm = () => {
           </Alert>
         </Snackbar>
       )}
-      {isSubmitting && <CircularLoading />}
+      <GoogleProvider
+        setIsLoading={setIsLoading}
+        text={`Sign up with Google`}
+        callbackUrl="/register"
+      />
     </>
   );
 };

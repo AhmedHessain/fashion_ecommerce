@@ -13,6 +13,7 @@ body {
   min-height: 100vh;
   display: flex;
   font-family: "Inter";
+  flex-direction: column;
 }
 
 @layer base {

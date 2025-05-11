@@ -6,7 +6,7 @@ import { headers } from "next/headers";
 import ResetToken from "../model/resetTokenModel";
 import dbConnect from "../db";
 import argon2 from "argon2";
-
+import { NextResponse } from "next/server";
 export const protect = catchAsync(async (req, event, next) => {
   await dbConnect();
   const authorization = headers().get("authorization");

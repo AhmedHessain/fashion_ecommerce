@@ -1,6 +1,5 @@
 import React from "react";
 import Image from "next/image";
-import GoogleIcon from "@/../public/Icon-Google.svg";
 import SignUpForm from "./RegisterForm";
 const Reigster = () => {
   return (
@@ -24,15 +23,6 @@ const Reigster = () => {
         <div className="flex flex-col items-center gap-9 flex-1 max-w-[400px] max-lg:max-w-full min-w-fit ">
           {/* inputs */}
           <SignUpForm />
-          <div className="border border-black border-opacity-25 w-full relative">
-            <p className="absolute left-[50%] translate-x-[-50%] translate-y-[-50%] text-black text-opacity-70 bg-[#FFFFFF]">
-              OR
-            </p>
-          </div>
-          <button className="border border-black rounded bg-white flex gap-4 px-12 h-[50px] w-full justify-center items-center">
-            <GoogleIcon />
-            Sign up with Google
-          </button>
         </div>
       </div>
     </div>

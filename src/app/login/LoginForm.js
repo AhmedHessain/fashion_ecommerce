@@ -6,14 +6,13 @@ import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { loginFormSchema } from "@/utils/schema";
 import CustomInput from "@/Components/CustomInput";
-import CircularLoading from "@/Components/Loader";
 import { login } from "../actions";
-
-const LoginForm = () => {
+import GoogleProvider from "@/Components/Google Provider";
+import { useGlobalLoading } from "@/context/loadingContext";
+const LoginForm = ({ nextAuthError }) => {
   const [showPassword, setShowPassword] = useState(false);
   const [error, setError] = useState("");
-  const [isLoading, setIsLoading] = useState(false);
-
+  const { setIsLoading } = useGlobalLoading();
   const {
     control,
     handleSubmit,
@@ -25,6 +24,7 @@ const LoginForm = () => {
 
   const onSubmit = async (data) => {
     try {
+      setIsLoading(true);
       const formData = new FormData();
       formData.append("email", data.email);
       formData.append("password", data.password);
@@ -38,6 +38,7 @@ const LoginForm = () => {
     } catch (err) {
       setError(err);
     }
+    setIsLoading(false);
   };
 
   useEffect(() => {
@@ -49,7 +50,7 @@ const LoginForm = () => {
         setError("Email or password is incorrect");
       }, 3000);
     }
-  }, [errors]);
+  }, [setIsLoading, errors]);
   return (
     <>
       <Box
@@ -95,7 +96,13 @@ const LoginForm = () => {
           </Link>
         </p>
       </Box>
-      {(isSubmitting || isLoading) && <CircularLoading />}
+      <GoogleProvider
+        setIsLoading={setIsLoading}
+        text={`Login with Google`}
+        callbackUrl="/login"
+        nextAuthError={nextAuthError}
+      />
+      {/* {(isSubmitting || isLoading) && <CircularLoading />} */}
     </>
   );
 };

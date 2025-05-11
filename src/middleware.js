@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { checkRoutes } from "./utils/utilFunctions";
 
 // 1. Specify protected and public routes (public routes won't appear for authenticated users)
-const protectedRoutes = ["/"];
+const protectedRoutes = ["/", "/about", "/contact"];
 const publicRoutes = [
   "/login",
   "/register",
@@ -23,7 +23,7 @@ export default async function middleware(req) {
   const accessTokenPayload = await decryptAccessToken(cookie);
 
   if (!accessTokenPayload) {
-    const res = await refreshAccessToken(req.nextUrl.href);
+    const res = await refreshAccessToken(req);
     if (res) return res;
   }
 

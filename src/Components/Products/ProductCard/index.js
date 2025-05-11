@@ -11,27 +11,29 @@ const poppins = Poppins({
   display: "swap",
 });
 
-const ProductCard = () => {
+const ProductCard = ({ product }) => {
   return (
-    <div className="rounded-lg bg-item_background shadow-lg shadow-[#ccc] flex flex-col overflow-hidden group">
+    <div className="rounded-lg bg-item_background shadow-lg shadow-[#ccc] flex flex-col overflow-hidden group max-w-fit">
       {/* upper div */}
       <div className="px-6 flex pt-5 pb-3 flex-1">
         {/* image */}
         <div className="bg-primary bg-opacity-25 flex justify-center items-center relative shadow-md ">
           <div className="w-52 h-52 p-8">
             <Image
-              src="/Frame 609.png"
+              src={product.mainImage}
               sizes="(max-width: 768px) 100vw, 33vw"
               width={0}
               height={0}
-              alt="product"
+              alt={product.name}
               className="h-full"
               quality={100}
             />
           </div>
-          <div className="bg-primary text-white px-5 py-1 rounded absolute top-2 left-3">
-            New
-          </div>
+          {product.priceAfterDiscount && (
+            <div className="bg-primary text-white px-5 py-1 rounded absolute top-2 left-3">
+              Sale
+            </div>
+          )}
           <div className="flex flex-col gap-3 absolute top-4 right-3 ">
             <div className="flex justify-center items-center rounded-[50%] bg-primary w-10 h-10">
               <HeartIcon className="scale-125" />
@@ -44,14 +46,25 @@ const ProductCard = () => {
       </div>
       {/* Lower div */}
       <div className={cn(`gap-2 flex flex-col p-4`, poppins.className)}>
-        <p className={cn("font-bold", poppins.className)}>Gucci duffle bag</p>
+        <p
+          className={cn(
+            "font-bold whitespace-break-spaces max-w-[224px]",
+            poppins.className
+          )}
+        >
+          {product.name}
+        </p>
         <div className="flex items-center gap-3">
-          <p className="text-text  font-bold">$960</p>
-          <p className="opacity-50 line-through font-bold">$1160</p>
+          <p className="text-text font-bold">${product.price}</p>
+          {product.priceAfterDiscount && (
+            <p className="opacity-50 line-through font-bold">
+              ${product.priceAfterDiscount}
+            </p>
+          )}
         </div>
         <div className="flex gap-2">
-          <Rating name="read-only" value={5} readOnly />
-          <p className="opacity-50">(65)</p>
+          <Rating name="read-only" value={product.ratingsAverage} readOnly />
+          <p className="opacity-50">({product.ratingsQuantity})</p>
         </div>
       </div>
       <div className="h-10 flex flex-col justify-end">

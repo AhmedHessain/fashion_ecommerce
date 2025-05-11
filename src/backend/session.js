@@ -94,12 +94,13 @@ export async function createSession(userId) {
 }
 
 // Validate and refresh access token
-export async function refreshAccessToken(url) {
+export async function refreshAccessToken(req) {
+  const url = req.nextUrl.href;
   const refreshToken = cookies().get("refreshToken")?.value;
 
   if (!refreshToken) return null;
 
-  // Find refresh token in DB
+  // Get New Access Token
   const response = await fetch(`${process.env.HOST}/api/refreshToken`, {
     headers: {
       authorization: `Bearer ${refreshToken}`,
@@ -107,8 +108,10 @@ export async function refreshAccessToken(url) {
   });
 
   if (response.status !== 200) {
-    await deleteSession();
-    return null;
+    const res = NextResponse.redirect(new URL("/login", req.url));
+    res.cookies.delete("accessToken");
+    res.cookies.delete("refreshToken");
+    return res;
   }
 
   const { newAccessToken } = await response.json();
@@ -138,7 +141,8 @@ export async function refreshAccessToken(url) {
 
 // Delete both access and refresh tokens (logging out)
 export async function deleteSession() {
-  const res = NextResponse.next();
-  res.cookies.delete("accessToken");
-  res.cookies.delete("refreshToken");
+  const refreshToken = cookies().get("refreshToken")?.value;
+  refreshToken && (await RefreshToken.deleteOne({ _id: refreshToken }));
+  cookies().delete("accessToken", { path: "/" });
+  cookies().delete("refreshToken", { path: "/" });
 }
