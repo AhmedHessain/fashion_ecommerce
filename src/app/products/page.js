@@ -8,15 +8,12 @@ import {
   Snackbar,
   Checkbox,
   FormControlLabel,
-  TextField,
-  Popover,
-  List,
-  ListItem,
-  ListItemText,
   Slider,
+  Chip,
 } from "@mui/material";
 import cn from "@/utils/cn";
 import productsData from "@/data/ProductsData.json";
+import { useRouter, useSearchParams } from "next/navigation";
 
 const categories = [
   "Accessories",
@@ -25,9 +22,6 @@ const categories = [
   "Shoes",
   "Trousers",
   "Tops",
-  "Dresses",
-  "Jackets",
-  "Coats",
 ];
 
 // Extract unique tags from products
@@ -40,11 +34,15 @@ const INITIAL_TAGS_SHOWN = 5;
 
 // Get min and max prices from products
 const prices = productsData.products.map((product) => product.price);
-const MIN_PRICE = Math.floor(Math.min(...prices));
+const MIN_PRICE = 0;
 const MAX_PRICE = Math.ceil(Math.max(...prices));
 
 export default function ProductsPage() {
+  const router = useRouter();
+  const searchParams = useSearchParams();
+
   const [products, setProducts] = useState([]);
+  const [loadingTimes, setLoadingTimes] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCategories, setSelectedCategories] = useState([]);
@@ -54,12 +52,61 @@ export default function ProductsPage() {
   const [sortBy, setSortBy] = useState("featured");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
-  const [totalProducts, setTotalProducts] = useState(0);
-
+  const [urlParsed, setUrlParsed] = useState(false);
+  console.log(loadingTimes);
   // Tag search states
-  const [tagSearchAnchor, setTagSearchAnchor] = useState(null);
-  const [tagSearchQuery, setTagSearchQuery] = useState("");
-  const [showAllTags, setShowAllTags] = useState(false);
+  const [tagInputValue, setTagInputValue] = useState("");
+  const [selectedIndex, setSelectedIndex] = useState(-1);
+
+  // Helper to get array from query param
+  const getArrayParam = (param) => {
+    const value = searchParams.getAll(param);
+    if (value.length > 0) return value;
+    const single = searchParams.get(param);
+    return single ? [single] : [];
+  };
+
+  // Parse initial state from URL
+  useEffect(() => {
+    // Categories
+    const urlCategories = getArrayParam("category");
+    setSelectedCategories(urlCategories);
+    // Tags
+    const urlTags = getArrayParam("tags");
+    setSelectedTags(urlTags);
+    // Price
+    const min = parseInt(searchParams.get("min") || MIN_PRICE, 10);
+    const max = parseInt(searchParams.get("max") || MAX_PRICE, 10);
+    setPriceRange([min, max]);
+    // Search
+    setSearchQuery(searchParams.get("search") || "");
+    // Sort
+    setSortBy(searchParams.get("sort") || "featured");
+    // Mark URL as parsed
+    setUrlParsed(true);
+    // eslint-disable-next-line
+  }, []);
+
+  // Update URL when filters change (but only after initial URL parsing)
+  useEffect(() => {
+    if (!urlParsed) return; // Don't update URL during initial parsing
+    
+    const params = new URLSearchParams();
+    // Categories
+    selectedCategories.forEach((cat) => params.append("category", cat));
+    // Tags
+    selectedTags.forEach((tag) => params.append("tags", tag));
+    // Price
+    if (priceRange[0] !== MIN_PRICE) params.set("min", priceRange[0]);
+    if (priceRange[1] !== MAX_PRICE) params.set("max", priceRange[1]);
+    // Search
+    if (searchQuery) params.set("search", searchQuery);
+    // Sort
+    if (sortBy && sortBy !== "featured") params.set("sort", sortBy);
+    // Do NOT set page in URL
+    router.replace(`?${params.toString()}`, { scroll: false });
+    // eslint-disable-next-line
+  }, [selectedCategories, selectedTags, priceRange, searchQuery, sortBy, urlParsed]);
 
   const buildQueryString = useCallback(() => {
     const params = new URLSearchParams();
@@ -125,24 +172,17 @@ export default function ProductsPage() {
           setProducts((prev) => [...prev, ...result.data]);
         }
 
-        setTotalProducts(result.total);
         setHasMore(result.data.length === ITEMS_PER_PAGE);
         setError(null);
       } catch (error) {
         console.error("Error fetching products:", error);
         setError(error.message);
-        // Fallback to local data if API fails
-        const filteredData = productsData.products.slice(
-          0,
-          page * ITEMS_PER_PAGE
-        );
-        setProducts(filteredData);
-        setHasMore(filteredData.length < productsData.products.length);
       } finally {
         setLoading(false);
+        setLoadingTimes((prev) => prev + 1);
       }
     },
-    [buildQueryString, page]
+    [buildQueryString]
   );
 
   // Handle price range change
@@ -185,49 +225,111 @@ export default function ProductsPage() {
     setSortBy(e.target.value);
   };
 
-  // Filter tags based on search query
-  const filteredTags = allTags.filter((tag) =>
-    tag.toLowerCase().includes(tagSearchQuery.toLowerCase())
-  );
+  // Get sorted categories with selected ones at the top
+  const sortedCategories = [...categories].sort((a, b) => {
+    const aSelected = selectedCategories.includes(a);
+    const bSelected = selectedCategories.includes(b);
+    if (aSelected && !bSelected) return -1;
+    if (!aSelected && bSelected) return 1;
+    return 0;
+  });
 
-  // Get initial tags to show
-  const initialTags = allTags.slice(0, INITIAL_TAGS_SHOWN);
+  // Get sorted tags with selected ones at the top
+  const sortedTags = [...allTags].sort((a, b) => {
+    const aSelected = selectedTags.includes(a);
+    const bSelected = selectedTags.includes(b);
+    if (aSelected && !bSelected) return -1;
+    if (!aSelected && bSelected) return 1;
+    return 0;
+  });
 
-  // Handle tag search
-  const handleTagSearch = (event) => {
-    setTagSearchQuery(event.target.value);
-    setTagSearchAnchor(event.currentTarget);
+  // Handle keyboard navigation
+  const handleKeyDown = (e) => {
+    const filteredTags = allTags
+      .filter(
+        (tag) =>
+          tag.toLowerCase().includes(tagInputValue.toLowerCase()) &&
+          !selectedTags.includes(tag)
+      )
+      .slice(0, 5 + selectedTags.length);
+
+    if (e.key === "ArrowDown") {
+      e.preventDefault();
+      setSelectedIndex((prev) =>
+        prev < filteredTags.length - 1 ? prev + 1 : prev
+      );
+    } else if (e.key === "ArrowUp") {
+      e.preventDefault();
+      setSelectedIndex((prev) => (prev > 0 ? prev - 1 : prev));
+    } else if (e.key === "Enter") {
+      e.preventDefault();
+      if (selectedIndex >= 0 && selectedIndex < filteredTags.length) {
+        handleTagChange(filteredTags[selectedIndex]);
+        setTagInputValue("");
+        setSelectedIndex(-1);
+      }
+    } else if (e.key === "Escape") {
+      setTagInputValue("");
+      setSelectedIndex(-1);
+    }
   };
 
-  const handleTagSearchClose = () => {
-    setTagSearchAnchor(null);
-    setTagSearchQuery("");
-  };
-
-  // Initial fetch and filter changes
+  // Reset selected index when input changes
   useEffect(() => {
-    setPage(1);
-    setProducts([]); // Clear existing products when filters change
-    fetchProducts(true);
-  }, [selectedCategories, selectedTags, priceRange, searchQuery, sortBy]);
+    setSelectedIndex(-1);
+  }, [tagInputValue]);
 
-  // Load more on scroll
+  // Handle click outside
   useEffect(() => {
-    const handleScroll = () => {
-      if (
-        window.innerHeight + document.documentElement.scrollTop >=
-        document.documentElement.offsetHeight - 100
-      ) {
-        if (!loading && hasMore) {
-          setPage((prev) => prev + 1);
-        }
+    const handleClickOutside = (event) => {
+      if (tagInputValue && !event.target.closest(".tag-input-container")) {
+        setTagInputValue("");
+        setSelectedIndex(-1);
       }
     };
 
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, [tagInputValue]);
+
+  // Initial fetch and filter changes
+  useEffect(() => {
+    if (!urlParsed) return; // Wait for URL parsing to complete
+    
+    setPage(1);
+    setProducts([]); // Clear existing products when filters change
+    fetchProducts(true);
+  }, [selectedCategories, selectedTags, priceRange, searchQuery, sortBy, urlParsed]); //adding fetchProducts to dependencies will fuck the scrolling
+
+  // Initial fetch after URL parsing
+  useEffect(() => {
+    if (urlParsed) {
+      fetchProducts(true);
+    }
+  }, [urlParsed, fetchProducts]);
+
+  // Load more on scroll
+  const handleScroll = () => {
+    console.log(loadingTimes);
+    if (
+      loadingTimes < 4 &&
+      window.innerHeight + document.documentElement.scrollTop >=
+        document.documentElement.offsetHeight - 520
+    ) {
+      if (!loading && hasMore) {
+        setPage((prev) => prev + 1);
+      }
+    }
+  };
+  useEffect(() => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [loading, hasMore]);
-
+  }, [loading, hasMore, loadingTimes]);
+  useEffect(() => {
+    if (loadingTimes === 0) {
+      handleScroll(true);
+    }
+  }, [loadingTimes]);
   // Load more products when page changes
   useEffect(() => {
     if (page > 1) {
@@ -238,190 +340,118 @@ export default function ProductsPage() {
   return (
     <div className="container mx-auto px-4 py-8">
       <div className="flex flex-col md:flex-row gap-8">
-        {/* Filters Sidebar */}
-        <div className="w-full md:w-64 space-y-6">
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Price Range</h3>
-            <div className="px-2">
-              <Slider
-                value={priceRange}
-                onChange={handlePriceRangeChange}
-                valueLabelDisplay="auto"
-                step={50}
-                min={MIN_PRICE}
-                max={MAX_PRICE}
-                sx={{
-                  color: "#B487C9",
-                  "& .MuiSlider-thumb": {
-                    "&:hover, &.Mui-focusVisible": {
-                      boxShadow:
-                        "0px 0px 0px 8px rgb(var(--primary-rgb) / 16%)",
-                    },
-                  },
-                }}
-              />
-              <div className="relative flex justify-between mt-2 text-sm text-black">
-                <span className="absolute -left-2">${priceRange[0]}</span>
-                <span className="absolute -right-2">${priceRange[1]}</span>
-              </div>
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Categories</h3>
-            <div className="flex flex-col gap-2">
-              {categories.map((category) => (
-                <FormControlLabel
-                  key={category}
-                  control={
-                    <Checkbox
-                      checked={selectedCategories.includes(category)}
-                      onChange={() => handleCategoryChange(category)}
-                      sx={{
-                        color: "#ccc",
-                        "&.Mui-checked": {
-                          color: "var(--primary)",
-                        },
-                        padding: "4px",
-                        "& .MuiSvgIcon-root": {
-                          fontSize: "1.2rem",
-                        },
-                      }}
-                    />
-                  }
-                  label={category}
-                  className={cn(
-                    "cursor-pointer text-sm",
-                    selectedCategories.includes(category) &&
-                      "text-primary font-semibold"
-                  )}
-                />
-              ))}
-            </div>
-          </div>
-
-          <div>
-            <h3 className="text-lg font-semibold mb-4">Tags</h3>
-            <div className="flex flex-col gap-2">
-              {/* Initial tags */}
-              {initialTags.map((tag) => (
-                <FormControlLabel
-                  key={tag}
-                  control={
-                    <Checkbox
-                      checked={selectedTags.includes(tag)}
-                      onChange={() => handleTagChange(tag)}
-                      sx={{
-                        color: "#ccc",
-                        "&.Mui-checked": {
-                          color: "var(--primary)",
-                        },
-                        padding: "4px",
-                        "& .MuiSvgIcon-root": {
-                          fontSize: "1.2rem",
-                        },
-                      }}
-                    />
-                  }
-                  label={tag}
-                  className={cn(
-                    "cursor-pointer text-sm",
-                    selectedTags.includes(tag) && "text-primary font-semibold"
-                  )}
-                />
-              ))}
-
-              {/* Tag search */}
-              <TextField
-                placeholder="Search more tags..."
-                value={tagSearchQuery}
-                onChange={handleTagSearch}
-                size="small"
-                fullWidth
-                className="mt-2"
-                sx={{
-                  "& .MuiOutlinedInput-root": {
-                    fontSize: "0.875rem",
-                  },
-                }}
-              />
-
-              {/* Tag search results */}
-              <Popover
-                open={Boolean(tagSearchAnchor)}
-                anchorEl={tagSearchAnchor}
-                onClose={handleTagSearchClose}
-                anchorOrigin={{
-                  vertical: "bottom",
-                  horizontal: "left",
-                }}
-                transformOrigin={{
-                  vertical: "top",
-                  horizontal: "left",
-                }}
-              >
-                <List
-                  sx={{
-                    width: "100%",
-                    maxWidth: 360,
-                    maxHeight: 300,
-                    overflow: "auto",
-                  }}
-                >
-                  {filteredTags.map((tag) => (
-                    <ListItem
-                      key={tag}
-                      button
-                      onClick={() => {
-                        handleTagChange(tag);
-                        handleTagSearchClose();
-                      }}
-                      sx={{ fontSize: "0.875rem" }}
-                    >
-                      <ListItemText primary={tag} />
-                    </ListItem>
-                  ))}
-                </List>
-              </Popover>
-
-              {/* Selected tags count */}
-              {selectedTags.length > 0 && (
-                <div className="text-base text-gray-500 mt-2">
-                  {selectedTags.length} tag
-                  {selectedTags.length !== 1 ? "s" : ""} selected
-                </div>
-              )}
-            </div>
-          </div>
-        </div>
-
         {/* Products Grid */}
         <div className="flex-1">
           {/* Search and Sort */}
-          <div className="mb-6 flex flex-col md:flex-row gap-4">
-            <input
-              type="text"
-              placeholder="Search products..."
-              className="flex-1 px-4 py-2 border rounded-lg"
-              value={searchQuery}
-              onChange={handleSearchChange}
-            />
-            <select
-              className="px-4 py-2 border rounded-lg"
-              value={sortBy}
-              onChange={handleSortChange}
-            >
-              <option value="featured">Featured</option>
-              <option value="price-low-high">Price: Low to High</option>
-              <option value="price-high-low">Price: High to Low</option>
-              <option value="rating">Top Rated</option>
-            </select>
+          <div className="mb-6 flex flex-col gap-4">
+            <div className="flex flex-col md:flex-row gap-4">
+              <input
+                type="text"
+                placeholder="Search products..."
+                className="flex-1 px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B487C9] focus:border-transparent transition-all duration-200"
+                value={searchQuery}
+                onChange={handleSearchChange}
+                style={{
+                  borderColor: "#B487C9",
+                  color: "#333",
+                  "&::placeholder": {
+                    color: "#999",
+                  },
+                }}
+              />
+              <select
+                className="px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B487C9] focus:border-transparent transition-all duration-200 cursor-pointer"
+                value={sortBy}
+                onChange={handleSortChange}
+                style={{
+                  borderColor: "#B487C9",
+                  color: "#333",
+                  backgroundColor: "white",
+                  appearance: "none",
+                  backgroundImage: `url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%23B487C9' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E")`,
+                  backgroundRepeat: "no-repeat",
+                  backgroundPosition: "right 0.5rem center",
+                  backgroundSize: "1.5em 1.5em",
+                  paddingRight: "2.5rem",
+                }}
+              >
+                <option value="featured">Featured</option>
+                <option value="price-low-high">Price: Low to High</option>
+                <option value="price-high-low">Price: High to Low</option>
+                <option value="rating">Top Rated</option>
+              </select>
+            </div>
+
+            {/* Active Filters Chips */}
+            {(selectedCategories.length > 0 ||
+              selectedTags.length > 0 ||
+              priceRange[0] > MIN_PRICE ||
+              priceRange[1] < MAX_PRICE) && (
+              <div className="flex flex-wrap gap-2 mt-2">
+                {selectedCategories.map((category) => (
+                  <Chip
+                    key={category}
+                    label={category}
+                    onDelete={() => handleCategoryChange(category)}
+                    sx={{
+                      border: "1px solid #B487C9",
+                      color: "#B487C9",
+                      "& .MuiChip-deleteIcon": {
+                        color: "#B487C9",
+                        "&:hover": {
+                          color: "#B487C9",
+                          opacity: 0.8,
+                        },
+                      },
+                    }}
+                    variant="outlined"
+                  />
+                ))}
+                {selectedTags.map((tag) => (
+                  <Chip
+                    key={tag}
+                    label={tag}
+                    onDelete={() => handleTagChange(tag)}
+                    sx={{
+                      border: "1px solid #B487C9",
+                      color: "#B487C9",
+                      "& .MuiChip-deleteIcon": {
+                        color: "#B487C9",
+                        "&:hover": {
+                          color: "#B487C9",
+                          opacity: 0.8,
+                        },
+                      },
+                    }}
+                    variant="outlined"
+                  />
+                ))}
+                {(priceRange[0] > MIN_PRICE || priceRange[1] < MAX_PRICE) && (
+                  <Chip
+                    label={`$${priceRange[0]} - $${priceRange[1]}`}
+                    onDelete={() => setPriceRange([MIN_PRICE, MAX_PRICE])}
+                    sx={{
+                      border: "1px solid #B487C9",
+                      color: "#B487C9",
+                      "& .MuiChip-deleteIcon": {
+                        color: "#B487C9",
+                        "&:hover": {
+                          color: "#B487C9",
+                          opacity: 0.8,
+                        },
+                      },
+                    }}
+                    variant="outlined"
+                  />
+                )}
+              </div>
+            )}
           </div>
 
           {/* Products flex */}
-          <div className="flex gap-x-10 gap-y-5 flex-wrap max-sm:px-2">
+          <div className="flex gap-x-12 gap-y-5 flex-wrap max-sm:px-2">
             {products.map((product) => (
-              <ProductCard key={product.name} product={product} />
+              <ProductCard key={product._id} product={product} />
             ))}
             {loading &&
               Array(4)
@@ -444,6 +474,201 @@ export default function ProductsPage() {
               <p className="text-gray-500">No more products to load</p>
             </div>
           )}
+
+          {loadingTimes >= 4 && hasMore && (
+            <button
+              className="bg-primary px-12 h-[50px] rounded text-white text-l w-full hover:bg-primary hover:bg-opacity-75 mt-10"
+              onClick={() => {
+                setLoadingTimes(0);
+              }}
+            >
+              Load More Items
+            </button>
+          )}
+        </div>
+
+        {/* Filters Sidebar */}
+        <div className="w-full md:w-72 space-y-6">
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Price Range</h3>
+            <div className="px-2">
+              <Slider
+                value={priceRange}
+                onChange={handlePriceRangeChange}
+                valueLabelDisplay="auto"
+                step={50}
+                min={MIN_PRICE}
+                max={MAX_PRICE}
+                sx={{
+                  color: "#B487C9",
+                  "& .MuiSlider-thumb": {
+                    "&:hover, &.Mui-focusVisible": {
+                      boxShadow: "0px 0px 0px 8px rgb(var(#B487C9-rgb) / 16%)",
+                    },
+                  },
+                }}
+              />
+              <div className="relative flex justify-between mt-2 text-sm text-black">
+                <span className="absolute -left-2">${priceRange[0]}</span>
+                <span className="absolute -right-2">${priceRange[1]}</span>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Categories</h3>
+            <div className="flex flex-col gap-2">
+              {sortedCategories.map((category) => (
+                <FormControlLabel
+                  key={category}
+                  control={
+                    <Checkbox
+                      checked={selectedCategories.includes(category)}
+                      onChange={() => handleCategoryChange(category)}
+                      sx={{
+                        color: "#ccc",
+                        "&.Mui-checked": {
+                          color: "#B487C9",
+                        },
+                        padding: "4px",
+                        "& .MuiSvgIcon-root": {
+                          fontSize: "1.2rem",
+                        },
+                      }}
+                    />
+                  }
+                  label={category}
+                  className={cn(
+                    "cursor-pointer text-sm ml-0",
+                    selectedCategories.includes(category) &&
+                      "text-primary font-semibold"
+                  )}
+                  sx={{
+                    "&.MuiFormControlLabel-root": {
+                      marginLeft: 0,
+                      marginRight: 0,
+                    },
+                  }}
+                />
+              ))}
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-lg font-semibold mb-4">Tags</h3>
+            <div className="flex flex-col gap-2">
+              {/* Tag input */}
+              <div className="relative tag-input-container">
+                <input
+                  type="text"
+                  placeholder="Search tags..."
+                  value={tagInputValue}
+                  onChange={(e) => setTagInputValue(e.target.value)}
+                  onKeyDown={handleKeyDown}
+                  onBlur={() => {
+                    // Small delay to allow click events to register
+                    setTimeout(() => {
+                      setTagInputValue("");
+                      setSelectedIndex(-1);
+                    }, 200);
+                  }}
+                  className="w-full px-4 py-2 border rounded-lg focus:outline-none focus:ring-2 focus:ring-[#B487C9] focus:border-transparent transition-all duration-200"
+                  style={{
+                    borderColor: "#B487C9",
+                    color: "#333",
+                  }}
+                />
+                {tagInputValue && (
+                  <div className="absolute w-full mt-1 bg-white border border-[#B487C9] rounded-lg shadow-lg z-50">
+                    <div className="max-h-60 overflow-y-auto">
+                      {allTags
+                        .filter(
+                          (tag) =>
+                            tag
+                              .toLowerCase()
+                              .includes(tagInputValue.toLowerCase()) &&
+                            !selectedTags.includes(tag)
+                        )
+                        .slice(0, 5)
+                        .map((tag, index) => (
+                          <div
+                            key={tag}
+                            onClick={() => {
+                              handleTagChange(tag);
+                              setTagInputValue("");
+                              setSelectedIndex(-1);
+                            }}
+                            className={`px-4 py-2 cursor-pointer hover:bg-[#B487C9]/10 ${
+                              index === selectedIndex ? "bg-[#B487C9]/10" : ""
+                            }`}
+                            style={{
+                              color: "#333",
+                              fontWeight: 400,
+                            }}
+                          >
+                            {tag}
+                          </div>
+                        ))}
+                    </div>
+                  </div>
+                )}
+              </div>
+
+              {/* Tags list */}
+              <div className="flex flex-col gap-2 mt-2">
+                {allTags
+                  .sort((a, b) => {
+                    const aSelected = selectedTags.includes(a);
+                    const bSelected = selectedTags.includes(b);
+                    if (aSelected && !bSelected) return -1;
+                    if (!aSelected && bSelected) return 1;
+                    return 0;
+                  })
+                  .slice(0, 5 + selectedTags.length)
+                  .map((tag) => (
+                    <FormControlLabel
+                      key={tag}
+                      control={
+                        <Checkbox
+                          checked={selectedTags.includes(tag)}
+                          onChange={() => handleTagChange(tag)}
+                          sx={{
+                            color: "#ccc",
+                            "&.Mui-checked": {
+                              color: "#B487C9",
+                            },
+                            padding: "4px",
+                            "& .MuiSvgIcon-root": {
+                              fontSize: "1.2rem",
+                            },
+                          }}
+                        />
+                      }
+                      label={tag}
+                      className={cn(
+                        "cursor-pointer text-sm",
+                        selectedTags.includes(tag) &&
+                          "text-primary font-semibold"
+                      )}
+                      sx={{
+                        "&.MuiFormControlLabel-root": {
+                          marginLeft: 0,
+                          marginRight: 0,
+                        },
+                      }}
+                    />
+                  ))}
+              </div>
+
+              {/* Selected tags count */}
+              {selectedTags.length > 0 && (
+                <div className="text-base text-gray-500 mt-2">
+                  {selectedTags.length} tag
+                  {selectedTags.length !== 1 ? "s" : ""} selected
+                </div>
+              )}
+            </div>
+          </div>
         </div>
       </div>
 

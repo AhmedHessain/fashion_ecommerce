@@ -11,13 +11,11 @@ export default class QueryBuilder {
     excludedFields.forEach((field) => {
       delete queryObj[field];
     });
-
     let queryStr = JSON.stringify(queryObj);
     queryStr = queryStr.replace(/\b(gte|gt|lte|lt)\b/g, (match) => `$${match}`);
+
     queryObj = JSON.parse(queryStr);
-
     this.mongoQuery = this.mongoQuery.find(queryObj);
-
     return this;
   }
 

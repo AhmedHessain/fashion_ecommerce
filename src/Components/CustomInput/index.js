@@ -98,29 +98,37 @@ const visibilityIconStyle = {
 };
 
 const CustomInput = ({
+  variant = "standard",
   name,
   label,
   control,
   showError,
   errors,
+  disabled = false, // Disable input if needed
   type = "text", // General type, defaults to "text"
   showPassword = false, // Show/hide password toggle
   criteria = [],
   setShowPassword, // Callback to handle visibility toggle
+  multiline = false, // Support for multiline inputs
+  rows = 1, // Number of rows for multiline inputs
+  showSuccess = true,
 }) => (
   <Controller
     name={name}
     control={control}
     defaultValue=""
     render={({ field }) => (
-      <Box sx={{ position: "relative" }}>
+      <Box sx={{ position: "relative", flex: 1 }}>
         <TextField
+          disabled={disabled} // Disable input if needed
           error={showError && !!errors[name]}
           label={label}
           type={type === "password" && showPassword ? "text" : type} // Handle password visibility
-          variant="standard"
+          variant={variant}
           fullWidth
           helperText={showError && errors[name] ? "" : ""}
+          multiline={multiline} // Support for multiline inputs
+          rows={rows} // Number of rows for multiline inputs
           {...field}
         />
         <div className="flex justify-center flex-row-reverse absolute top-[40%] right-1">
@@ -166,7 +174,7 @@ const CustomInput = ({
           )}
 
           {/* Success icon */}
-          {showError && !errors[name] && field.value && (
+          {showSuccess && !errors[name] && field.value && (
             <Tooltip arrow>
               <CheckCircleIcon sx={{ ...iconStyle, color: "green" }} />
             </Tooltip>

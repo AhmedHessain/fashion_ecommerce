@@ -1,6 +1,5 @@
 "use server";
 import mongoose from "mongoose";
-
 const MONGO_DB_URL = process.env.DATABASE.replace(
   "<db_password>",
   process.env.DATABASE_PASSWORD
@@ -27,6 +26,7 @@ async function dbConnect() {
       bufferCommands: false,
     };
     cached.promise = mongoose.connect(MONGO_DB_URL, opts).then((mongoose) => {
+      require("../model/reviewModel");
       console.log("Db connected");
       return mongoose;
     });

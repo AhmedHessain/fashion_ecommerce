@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-
 const productSchema = new mongoose.Schema({
   name: {
     type: String,
@@ -61,6 +60,12 @@ productSchema.index({ price: 1, ratingsAverage: -1 });
 productSchema.pre("save", function (next) {
   this.updatedDate = Date.now();
   next();
+});
+
+productSchema.virtual("reviews", {
+  ref: "Review",
+  foreignField: "product",
+  localField: "_id",
 });
 
 const Product =

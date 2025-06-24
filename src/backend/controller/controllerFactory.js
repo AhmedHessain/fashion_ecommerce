@@ -2,7 +2,7 @@ import { catchAsync } from "../utils/captureErrors";
 import AppError from "../utils/AppError";
 import QueryBuilder from "../utils/queryBuilder";
 import { NextResponse } from "next/server";
-
+import qs from "qs";
 export const deleteDoc = (model) =>
   catchAsync(async (req, event, next) => {
     const doc = await model.findByIdAndDelete(event.params.id);
@@ -16,21 +16,26 @@ export const deleteDoc = (model) =>
 
 export const getAllDocs = (model, fn) =>
   catchAsync(async (req, event, next) => {
-    const { searchParams } = new URL(req.url);
-    const queryObj = Object.fromEntries(searchParams.entries());
+    const url = new URL(req.url);
+    const queryString = url.searchParams.toString();
+    const queryObj = qs.parse(queryString);
+    if (queryObj.name) {
+      queryObj.name = { $regex: queryObj.name, $options: "i" };
+    }
 
     const filter = (fn && fn({ query: queryObj, params: event.params })) || {};
-
     const queryBuilder = new QueryBuilder(model.find(filter), queryObj);
     queryBuilder.filter().sort().paginate().project();
 
     const docs = await queryBuilder.mongoQuery;
-
-    return NextResponse.json({
-      status: "success",
-      results: docs.length,
-      data: docs,
-    });
+    return NextResponse.json(
+      {
+        status: "success",
+        results: docs.length,
+        data: docs,
+      },
+      { status: 200 }
+    );
   });
 
 export const getDocById = (model, populate = "") =>

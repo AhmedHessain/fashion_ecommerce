@@ -1,0 +1,276 @@
+"use client";
+import { useParams } from "next/navigation";
+import React, { useEffect, useState } from "react";
+import { Inter, Poppins } from "next/font/google";
+import { Rating } from "@mui/material";
+import HeartIcon from "@/../public/heart-icon.svg";
+import cn from "@/utils/cn";
+import DeliveryIcon from "@/../public/icon-delivery.svg";
+import ReturnIcon from "@/../public/Icon-return.svg";
+import LeftArrowIcon from "@/../public/to-left-arrow-icon.svg";
+import RightArrowIcon from "@/../public/to-right-arrow-icon.svg";
+import Image from "next/image";
+import ProductDetailSkeleton from "@/Components/Products/ProductDetailSkeleton";
+const inter = Inter({ subsets: ["latin"], display: "swap" });
+const poppins = Poppins({
+  subsets: ["latin"],
+  variable: "--font-poppins",
+  display: "swap",
+  preload: true,
+  weight: ["100", "200", "300", "400", "500", "600", "700", "800", "900"],
+});
+const ProductPage = () => {
+  const { id } = useParams();
+  const [quantity, setQuantity] = useState(1);
+  const [product, setProduct] = useState({});
+  const [wishListed, setWishListed] = useState(false);
+  const [imageToZoom, setImageToZoom] = useState(-1);
+  const [currentImage, setCurrentImage] = useState(-1);
+  useEffect(() => {
+    // Fetch product details using the id
+    const fetchProductDetails = async () => {
+      try {
+        const response = await fetch(`/api/products/${id}`);
+        if (!response.ok) {
+          throw new Error("Failed to fetch product details");
+        }
+        const product = await response.json();
+        setProduct({
+          allImages: [product.data.mainImage, ...product.data.otherImages],
+          ...product.data,
+        });
+        setCurrentImage(0);
+      } catch (error) {
+        console.error("Error fetching product details:", error);
+      }
+    };
+    fetchProductDetails();
+  }, [id]);
+  console.log(product);
+  return (
+    <>
+      {!(product.allImages && product.allImages.length > 0) ? (
+        <ProductDetailSkeleton />
+      ) : (
+        <div className="flex flex-1 w-full px-36 pt-16 gap-6 max-xl:flex-col max-:px-10 max-sm:px-3">
+          <div className="flex-1 min-w-[512px] flex gap-2 max-h-[512px] max-sm:min-w-0">
+            <div className="flex-[0.25] flex flex-col gap-2 overflow-y-auto [scrollbar-width:none] [&::-webkit-scrollbar]:hidden">
+              {product.allImages &&
+                product.allImages.length > 0 &&
+                product.allImages.map((image, index) => {
+                  console.log(image, index);
+                  return (
+                    <div
+                      key={image}
+                      className="bg-[#FAFAFA] flex justify-center items-center cursor-pointer"
+                      onMouseOver={() => {
+                        setCurrentImage(index);
+                      }}
+                      onClick={() => {
+                        setImageToZoom(index);
+                      }}
+                    >
+                      <Image
+                        src={image}
+                        sizes="(max-width: 768px) 100vw, 33vw"
+                        width={0}
+                        height={0}
+                        alt={product.name}
+                        className="h-full"
+                        quality={100}
+                      />
+                    </div>
+                  );
+                })}
+            </div>
+            <div
+              className="flex-[0.75] bg-[#FAFAFA] flex justify-center items-center cursor-pointer"
+              onClick={() => {
+                setImageToZoom(currentImage);
+              }}
+            >
+              <Image
+                src={currentImage >= 0 && product.allImages[currentImage]}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                width={0}
+                height={0}
+                alt={product.name}
+                className="h-[75%]"
+                quality={100}
+              />
+            </div>
+          </div>
+          <div className="max-w-lg flex-1">
+            <h1 className={`text-l font-semibold ${inter.className}`}>
+              {product.name}
+            </h1>
+            <div className="flex items-center mt-3">
+              <div className="flex items-center">
+                <Rating
+                  name="read-only"
+                  value={product.ratingsAverage}
+                  readOnly
+                />
+                <p className="opacity-50">
+                  ({product.ratingsQuantity} Reviews)
+                </p>
+              </div>
+              <div className="mx-2">|</div>
+              <p
+                className={`${poppins.className} text-[14px] text-primary ${
+                  product.quantity >= 1 ? "text-primary" : "text-red-500"
+                }`}
+              >
+                {product.quantity >= 1 ? "In Stock" : "Out of Stock"}
+              </p>
+            </div>
+            <p className={`text-l mt-4 ${inter.className}`}>${product.price}</p>
+            <p className="mt-4">Description: {product.description}</p>
+            <div className="py-5 flex">
+              <div className="flex-1 border opacity-50 border-[#000000]"></div>
+            </div>
+            {/* here */}
+            <div>
+              <div className="flex justify-between max-xl:flex-col gap-4">
+                <div className="flex items-stretch">
+                  <div
+                    className="px-5 border rounded-l flex items-center cursor-pointer"
+                    onClick={() => setQuantity((prev) => Math.max(prev - 1, 1))}
+                  >
+                    -
+                  </div>
+                  <input
+                    type="number"
+                    value={quantity}
+                    max={product.quantity}
+                    min={1}
+                    onChange={(e) => {
+                      const val = +e.target.value;
+                      if (val >= 1 && val <= product.quantity) {
+                        setQuantity(val);
+                      } else if (val === 0 || isNaN(val)) {
+                        // Optional: allow clearing to 1 if someone deletes the input
+                        setQuantity(1);
+                      }
+                    }}
+                    className="w-32 p-2 border text-center [appearance:textfield] [&::-webkit-inner-spin-button]:appearance-none [&::-webkit-outer-spin-button]:appearance-none"
+                  />
+                  <div
+                    className="px-5 border rounded-r flex items-center cursor-pointer bg-primary text-white"
+                    onClick={() =>
+                      setQuantity((prev) =>
+                        Math.min(prev + 1, product.quantity)
+                      )
+                    }
+                  >
+                    +
+                  </div>
+                </div>
+                <div className="flex gap-4">
+                  <button className="bg-primary px-12 h-[50px] rounded text-white text-l self-end max-xl:self-center hover:bg-primary hover:bg-opacity-75">
+                    Buy Now
+                  </button>
+                  <button
+                    className="border rounded flex justify-center items-center px-4 border-black border-opacity-50"
+                    onClick={() => {
+                      setWishListed((prev) => !prev);
+                    }}
+                  >
+                    <HeartIcon
+                      className={cn("scale-125 text-black")}
+                      fill={wishListed ? "#00000" : "none"}
+                    />
+                  </button>
+                </div>
+              </div>
+              <div className="mt-10">
+                <div className="flex gap-5 items-center pl-3 py-3 border border-black border-opacity-50 rounded-t">
+                  <DeliveryIcon />
+                  <div className="flex flex-col">
+                    <h4
+                      className={`${poppins.className} font-medium text-base`}
+                    >
+                      Free Delivery
+                    </h4>
+                    <p className={`${poppins.className} text-[12px]`}>
+                      Enjoy free delivery to anywhere you want
+                    </p>
+                  </div>
+                </div>
+                <div className="flex gap-5 items-center pl-3 py-3 border border-t-0 border-black border-opacity-50 rounded-b">
+                  <ReturnIcon />
+                  <div className="flex flex-col">
+                    <h4
+                      className={`${poppins.className} font-medium text-base`}
+                    >
+                      Return Delivery
+                    </h4>
+                    <p className={`${poppins.className} text-[12px]`}>
+                      Free 30 Days Delivery Returns.{" "}
+                      <span className="underline">Details</span>
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      )}
+      {imageToZoom >= 0 && (
+        <div
+          className="absolute top-0 left-0 w-full h-full bg-black bg-opacity-20 flex justify-between"
+          onClick={() => {
+            setImageToZoom(-1);
+          }}
+        >
+          <div
+            className="w-20 h-full items-center justify-center flex hover:bg-white hover:bg-opacity-10 cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+              setImageToZoom((prev) =>
+                prev + 1 > product.allImages.length - 1 ? 0 : prev + 1
+              );
+            }}
+          >
+            <div className="w-10 h-10 rounded-[50%] bg-primary flex justify-center items-center cursor-pointer">
+              <LeftArrowIcon />
+            </div>
+          </div>
+          <div className="flex justify-center items-center ">
+            <div
+              className="p-20 max-xl:p-10 max-xl:h-[320px] flex-1 h-[512px] bg-[#FAFAFA] flex justify-center items-center rounded border-8 border-primary shadow-xl border-opacity-25"
+              onClick={(e) => {
+                e.stopPropagation();
+              }}
+            >
+              <Image
+                src={imageToZoom >= 0 && product.allImages[imageToZoom]}
+                sizes="(max-width: 768px) 100vw, 33vw"
+                width={0}
+                height={0}
+                alt={product.name}
+                className="h-[75%]"
+                quality={100}
+              />
+            </div>
+          </div>
+          <div
+            className="w-20 h-full items-center justify-center flex hover:bg-white hover:bg-opacity-10 cursor-pointer"
+            onClick={(e) => {
+              e.stopPropagation();
+              setImageToZoom((prev) =>
+                prev - 1 < 0 ? product.allImages.length - 1 : prev - 1
+              );
+            }}
+          >
+            <div className="w-10 h-10 rounded-[50%] bg-primary flex justify-center items-center cursor-pointer">
+              <RightArrowIcon />
+            </div>
+          </div>
+        </div>
+      )}
+    </>
+  );
+};
+
+export default ProductPage;

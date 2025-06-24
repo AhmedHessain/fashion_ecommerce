@@ -13,7 +13,10 @@ import { cookies } from "next/headers";
 import { redirect } from "next/navigation";
 import startAsyncTransaction from "@/backend/utils/startAsyncTransaction";
 import ResetToken from "@/backend/model/resetTokenModel";
-import { sendResetPasswordEmail } from "@/backend/utils/emails";
+import {
+  sendContactFormEmail,
+  sendResetPasswordEmail,
+} from "@/backend/utils/emails";
 import crypto from "crypto";
 import argon2 from "argon2";
 import { validateResetToken } from "@/backend/controller/authController";
@@ -145,3 +148,13 @@ export async function GetCurrentUser() {
   if (!user) return null;
   return user;
 }
+
+export const sendContactFormMessage = catchAsyncServerActions(
+  async (formData) => {
+    const { name, email, phone, message } = Object.fromEntries(formData);
+    console.log(
+      `Contact Form Submission: Name: ${name}, Email: ${email}, Phone: ${phone}, Message: ${message}`
+    );
+    await sendContactFormEmail({ name, email, phone, message });
+  }
+);

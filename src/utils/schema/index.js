@@ -79,3 +79,13 @@ export const resetPasswordSchema = z
       });
     }
   });
+
+export const contactFormSchema = z.object({
+  name: z.string().min(1, "Name is required"),
+  email: z.string().email("Invalid email address"),
+  phone: z
+    .string()
+    .min(1, "Phone number is required")
+    .regex(/^\+?[0-9]{10,15}$/, "Please enter a valid phone number"),
+  message: z.string().min(1, "Message is required"),
+});

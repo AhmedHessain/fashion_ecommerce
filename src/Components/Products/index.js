@@ -4,7 +4,18 @@ import ProductCard from "./ProductCard";
 import cn from "@/utils/cn";
 import LeftArrowIcon from "@/../public/to-left-arrow-icon.svg";
 import RightArrowIcon from "@/../public/to-right-arrow-icon.svg";
-const Products = ({ name, title, paginate }) => {
+import ProductCardSkeleton from "@/Components/Products/ProductCardSkeleton";
+
+const Products = ({
+  name,
+  title,
+  paginate,
+  data,
+  setPage,
+  page,
+  totalPages,
+  isloadingPage,
+}) => {
   return (
     <section className="w-full flex flex-col gap-5 items-center">
       <div className="p-8 flex self-stretch justify-between items-center flex-wrap">
@@ -23,16 +34,34 @@ const Products = ({ name, title, paginate }) => {
         </div>
         {paginate ? (
           <div className="flex gap-2">
-            <div className="w-10 h-10 rounded-[50%] bg-primary flex justify-center items-center cursor-pointer">
+            <div
+              className={cn(
+                `w-10 h-10 rounded-[50%] bg-primary flex justify-center items-center cursor-pointer`,
+                { "bg-opacity-50": page && page <= 1 }
+              )}
+              onClick={() => {
+                setPage((prev) => (prev > 1 ? prev - 1 : prev));
+              }}
+            >
               <LeftArrowIcon />
             </div>
-            <div className="w-10 h-10 rounded-[50%] bg-primary flex justify-center items-center cursor-pointer">
+            <div
+              className={cn(
+                `w-10 h-10 rounded-[50%] bg-primary flex justify-center items-center cursor-pointer`,
+                { "bg-opacity-50": totalPages && page >= totalPages }
+              )}
+              onClick={() => {
+                if (isloadingPage) return;
+                if (totalPages && page >= totalPages) return;
+                setPage((prev) => prev + 1);
+              }}
+            >
               <RightArrowIcon />
             </div>
           </div>
         ) : (
           <Link
-            href={""}
+            href="/products"
             className="bg-primary text-center w-60 px-4 py-3 rounded-[4px] text-white text-l hover:bg-primary hover:bg-opacity-75 max-h-fit"
           >
             View All
@@ -40,18 +69,19 @@ const Products = ({ name, title, paginate }) => {
         )}
       </div>
       <div className="flex gap-x-10 gap-y-5 flex-wrap px-12 justify-center max-sm:px-2">
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
-        <ProductCard />
+        {data && data.length > 0
+          ? data.map((product) => (
+              <ProductCard key={product.name} product={product} />
+            ))
+          : Array(8)
+              .fill(0)
+              .map((_, index) => (
+                <ProductCardSkeleton key={`skeleton-${index}`} />
+              ))}
       </div>
       {paginate ? (
         <Link
-          href={""}
+          href={"/products"}
           className="bg-primary text-center w-60 px-4 py-3 rounded-[4px] text-white text-l hover:bg-primary hover:bg-opacity-75 max-h-fit mt-5"
         >
           View All Products

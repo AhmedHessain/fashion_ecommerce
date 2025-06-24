@@ -1,11 +1,71 @@
+"use client";
 import BreakLine from "@/Components/BreakLine";
 import Products from "@/Components/Products";
 import Image from "next/image";
 import Link from "next/link";
 import NewArrivals from "@/Components/NewArrivals";
-export default async function Home() {
+import { useEffect, useState } from "react";
+import Services from "@/Components/Services";
+export default function Home() {
+  const [highestTenSoldProducts, setHighestTenSoldProducts] = useState([]);
+  const [isLoadingPage, setIsLoadingPage] = useState(false);
+  const [page, setPage] = useState(1);
+  const [totalPages, setTotalPages] = useState(null);
+  const [products, setProducts] = useState({});
+  useEffect(() => {
+    const fetchHighestTenSoldProducts = async () => {
+      try {
+        const data = await getHighestTenSoldProducts();
+        setHighestTenSoldProducts(data.products);
+      } catch (error) {
+        console.error("Error fetching highest ten sold products:", error);
+      }
+    };
+    fetchHighestTenSoldProducts();
+  }, []);
+  useEffect(() => {
+    const fetchProducts = async () => {
+      try {
+        const ITEMS_PER_PAGE = 8;
+        const res = await fetch(
+          `/api/products?page=${page}&limit=${ITEMS_PER_PAGE}`,
+          {
+            next: { revalidate: 60 },
+          }
+        );
+        if (!res.ok) {
+          throw new Error("Failed to fetch data");
+        }
+        const data = await res.json();
+        if (data.data.length !== ITEMS_PER_PAGE) {
+          setTotalPages(page);
+        }
+        setProducts((prev) => ({
+          ...prev,
+          [page]: data.data,
+        }));
+      } catch (error) {
+        console.error("Error fetching products:", error);
+      } finally {
+        setIsLoadingPage(false);
+      }
+    };
+    if (products[page]) return; // If products for the current page are already fetched, skip fetching
+    setIsLoadingPage(true);
+
+    !isLoadingPage && fetchProducts();
+  }, [page, products, isLoadingPage]);
+  const getHighestTenSoldProducts = async () => {
+    const res = await fetch(`/api/products/highestTenSoldProducts`, {
+      next: { revalidate: 60 },
+    });
+    if (!res.ok) {
+      throw new Error("Failed to fetch data");
+    }
+    return res.json();
+  };
   return (
-    <main className="flex flex-col flex-1">
+    <div className="flex flex-col flex-1">
       <section className="flex">
         <div className="basis-3/4 flex flex-col gap-8 px-28 py-14 justify-center max-md:pr-10 max-sm:px-4">
           <h1 className="text-xxxl max-w-[650px] m-0 tracking-tight leading-[70px]">
@@ -20,7 +80,7 @@ export default async function Home() {
             recommendations, free shipping, and hassle-free returns
           </h4>
           <Link
-            href={"/"}
+            href="/products"
             className="bg-primary px-12 py-3 rounded text-white text-l w-fit hover:bg-primary hover:bg-opacity-75"
           >
             {" "}
@@ -48,9 +108,25 @@ export default async function Home() {
           </div>
         </div>
       </section>
-      <Products name={"This Month"} title={"Best Selling Products"} />
+      <div className="my-12">
+        <Services />
+      </div>
+      <Products
+        name={"This Month"}
+        title={"Best Selling Products"}
+        data={highestTenSoldProducts}
+      />
       <BreakLine />
-      <Products name={"This Month"} title={"Explore Our Products"} paginate />
+      <Products
+        name={"This Month"}
+        title={"Explore Our Products"}
+        paginate
+        data={products[page]}
+        setPage={setPage}
+        page={page}
+        totalPages={totalPages}
+        isLoadingPage={isLoadingPage}
+      />
       <BreakLine />
       <NewArrivals />
       <BreakLine />
@@ -66,13 +142,13 @@ export default async function Home() {
           </p>
         </div>
         <Link
-          href={"/"}
+          href="/products"
           className="bg-primary px-12 py-3 rounded text-white text-l w-fit hover:bg-primary hover:bg-opacity-75"
         >
           {" "}
           Shop Now{" "}
         </Link>
       </section>
-    </main>
+    </div>
   );
 }

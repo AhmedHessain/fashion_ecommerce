@@ -103,5 +103,6 @@ export const handleServerActionCatch = (unhandledServerActionCatch) => {
 
 export const handleMiddlewareError = (unhandledMiddlewareCatch) => {
   const err = handleError(unhandledMiddlewareCatch);
+  console.log(err);
   return sendError(err);
 };

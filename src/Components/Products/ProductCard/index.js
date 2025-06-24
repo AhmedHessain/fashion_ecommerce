@@ -5,6 +5,7 @@ import { Poppins } from "next/font/google";
 import HeartIcon from "@/../public/heart-icon.svg";
 import QuickViewIcon from "@/../public/Quick-View-icon.svg";
 import cn from "@/utils/cn";
+import Link from "next/link";
 const poppins = Poppins({
   weight: ["400", "700"], // Choose weights you need
   subsets: ["latin"], // Choose subsets you need
@@ -13,7 +14,10 @@ const poppins = Poppins({
 
 const ProductCard = ({ product }) => {
   return (
-    <div className="rounded-lg bg-item_background shadow-lg shadow-[#ccc] flex flex-col overflow-hidden group max-w-fit">
+    <Link
+      href={`/products/${product._id}`}
+      className="rounded-lg bg-item_background shadow-lg shadow-[#ccc] flex flex-col overflow-hidden group max-w-fit"
+    >
       {/* upper div */}
       <div className="px-6 flex pt-5 pb-3 flex-1">
         {/* image */}
@@ -35,7 +39,7 @@ const ProductCard = ({ product }) => {
             </div>
           )}
           <div className="flex flex-col gap-3 absolute top-4 right-3 ">
-            <div className="flex justify-center items-center rounded-[50%] bg-primary w-10 h-10">
+            <div className="flex justify-center items-center rounded-[50%] bg-primary w-10 h-10 text-white">
               <HeartIcon className="scale-125" />
             </div>
             <div className="flex justify-center items-center rounded-[50%] bg-primary w-10 h-10">
@@ -72,7 +76,7 @@ const ProductCard = ({ product }) => {
           Add to cart
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

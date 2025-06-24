@@ -87,3 +87,92 @@ export const sendResetPasswordEmail = async (email, url) => {
         `,
   });
 };
+
+export const sendContactFormEmail = async ({ name, email, phone, message }) => {
+  const transporter = nodemailer.createTransport({
+    host: process.env.EMAIL_HOST,
+    port: process.env.EMAIL_PORT,
+    auth: {
+      user: process.env.EMAIL_USERNAME,
+      pass: process.env.EMAIL_PASSWORD,
+    },
+  });
+
+  await transporter.sendMail({
+    from: `"${name}" <${email}>`,
+    to: "fashion@ic.com>", // Your receiving email
+    subject: "📬 New Contact Form Message",
+    replyTo: email, // Reply to the sender's email
+    html: `
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Contact Message</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f7f1fa;
+      color: #333;
+      padding: 20px;
+      margin: 0;
+    }
+    .container {
+        display: flex;
+        flex-direction: column;
+      max-width: 600px;
+      margin: 0 auto;
+      background-color: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    }
+    h2 {
+      text-align: center;
+      color: #4a4a4a;
+    }
+    .info {
+      margin-bottom: 20px;
+    }
+    .info p {
+      margin: 4px 0;
+    }
+    .message-box {
+    width: 100%;
+      background-color: #f3f3f3;
+      padding: 15px;
+      border-left: 4px solid #B487C9;
+      border-radius: 4px;
+white-space: pre-wrap;
+word-wrap: break-word;
+overflow-wrap: break-word;
+    }
+    .footer {
+      margin-top: 30px;
+      font-size: 0.9em;
+      text-align: center;
+      color: #888;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h2>📨 New Message from Contact Form</h2>
+    <div class="info">
+      <p><strong>Name:</strong> ${name}</p>
+      <p><strong>Email:</strong> ${email}</p>
+      <p><strong>Phone:</strong> ${phone}</p>
+    </div>
+    <div class="message-box">
+      ${message}
+    </div>
+    <div class="footer">
+      <p>This message was sent from your website contact form.</p>
+    </div>
+  </div>
+</body>
+</html>
+    `,
+  });
+};

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import GoogleIcon from "@/../public/Icon-Google.svg";
+import GoogleIcon from "@/../public/icon-google.svg";
 import { signIn } from "next-auth/react";
 
 const GoogleProvider = ({ setIsLoading, text, callbackUrl, nextAuthError }) => {
