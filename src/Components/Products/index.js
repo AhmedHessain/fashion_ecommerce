@@ -15,6 +15,8 @@ const Products = ({
   page,
   totalPages,
   isloadingPage,
+  isFetchingComplete = false,
+  fallback,
 }) => {
   return (
     <section className="w-full flex flex-col gap-5 items-center">
@@ -69,15 +71,19 @@ const Products = ({
         )}
       </div>
       <div className="flex gap-x-10 gap-y-5 flex-wrap px-12 justify-center max-sm:px-2">
-        {data && data.length > 0
-          ? data.map((product) => (
-              <ProductCard key={product.name} product={product} />
+        {data && data.length > 0 ? (
+          data.map((product) => (
+            <ProductCard key={product.name} product={product} />
+          ))
+        ) : isFetchingComplete ? (
+          <>{fallback}</>
+        ) : (
+          Array(8)
+            .fill(0)
+            .map((_, index) => (
+              <ProductCardSkeleton key={`skeleton-${index}`} />
             ))
-          : Array(8)
-              .fill(0)
-              .map((_, index) => (
-                <ProductCardSkeleton key={`skeleton-${index}`} />
-              ))}
+        )}
       </div>
       {paginate ? (
         <Link

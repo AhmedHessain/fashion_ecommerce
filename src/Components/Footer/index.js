@@ -1,4 +1,5 @@
-import React from "react";
+"use client";
+import React, { useEffect } from "react";
 import Link from "next/link";
 import InstagramIcon from "@/../public/icon-instagram.svg";
 import FacebookIcon from "@/../public/icon-Facebook.svg";
@@ -46,17 +47,17 @@ const Footer = () => {
             Account
           </h3>
           <Link href="/">My Account</Link>
-          <Link href="/">Cart</Link>
-          <Link href="/">Wishlist</Link>
+          <Link href="./cart">Cart</Link>
+          <Link href="./wishlist">Wishlist</Link>
           <Link href="/products">Shop</Link>
         </div>
         <div className="flex flex-col gap-6">
           <h3 className={`text-[20px] font-medium ${poppins.className}`}>
             Quick Links
           </h3>
-          <Link href="/">Privacy Policy</Link>
-          <Link href="/">Terms Of Use</Link>
-          <Link href="/">FAQ</Link>
+          <Link href="./privacy-policy">Privacy Policy</Link>
+          <Link href="./terms-of-use">Terms Of Use</Link>
+          <Link href="./faq">FAQ</Link>
           <Link href="/contact">Contact</Link>
         </div>
         <div className="flex flex-col gap-6">
@@ -82,7 +83,7 @@ const Footer = () => {
       <div
         className={`${poppins.className} text-primary py-4 opacity-30 w-full text-base flex justify-center items-center border-t border-white border-opacity-50`}
       >
-        © Copyright Exclusive 2022. All right reserved
+        © {new Date().getFullYear()} Exclusive. All rights reserved.
       </div>
     </footer>
   );

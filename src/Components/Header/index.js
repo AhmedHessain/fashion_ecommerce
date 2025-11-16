@@ -10,12 +10,15 @@ import CartIcon from "@/../public/cart-icon.svg";
 import OrderIcon from "@/../public/order-icon.svg";
 import LogoutIcon from "@/../public/logout-icon.svg";
 import ReviewIcon from "@/../public/reviews-icon.svg";
+import NotificationIcon from "@/../public/notification-icon.svg";
 import cn from "@/utils/cn";
 import { logout } from "@/app/actions";
 import { useUser } from "@/context/userContext";
 import { useRouter, usePathname } from "next/navigation";
 import Image from "next/image";
+import { updateUserData } from "@/app/actions";
 import { useGlobalLoading } from "@/context/loadingContext";
+
 const poppins = Poppins({
   subsets: ["latin"],
   variable: "--font-poppins",
@@ -32,14 +35,14 @@ const Header = () => {
   const { setIsLoading } = useGlobalLoading();
   const router = useRouter();
   const pathname = usePathname();
-  const user = useUser();
+  const { user, setUser } = useUser();
+  const [isNotifOpen, setIsNotifOpen] = useState(false);
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isUserMenuOpen, setIsUserMenuOpen] = useState(false);
   const [searchValue, setSearchValue] = useState("");
   const [suggestions, setSuggestions] = useState([]);
   const [showSuggestions, setShowSuggestions] = useState(false);
   const [highlightedIndex, setHighlightedIndex] = useState(-1);
-
   useEffect(() => {
     document.body.classList.toggle("overflow-hidden", isMenuOpen);
   }, [isMenuOpen]);
@@ -50,7 +53,9 @@ const Header = () => {
       if (showSuggestions) {
         const fetchRandomProducts = async () => {
           try {
-            const res = await fetch('/api/products?limit=6&fields=name,_id,mainImage');
+            const res = await fetch(
+              "/api/products?limit=6&fields=name,_id,mainImage"
+            );
             const data = await res.json();
             const randomProducts = (data.data || []).map((p) => ({
               type: "product",
@@ -59,7 +64,11 @@ const Header = () => {
               mainImage: p.mainImage,
             }));
             // Add "browse all products" option for random products
-            randomProducts.push({ type: "see_more", query: "", isBrowseAll: true });
+            randomProducts.push({
+              type: "see_more",
+              query: "",
+              isBrowseAll: true,
+            });
             setSuggestions(randomProducts);
           } catch (e) {
             setSuggestions([]);
@@ -104,20 +113,23 @@ const Header = () => {
       router.push(`/products/${sugg.id}`);
     } else if (sugg.type === "see_more") {
       if (pathname === "/products") {
-        window.location.href = `/products?search=${encodeURIComponent(sugg.query)}`;
+        window.location.href = `/products?search=${encodeURIComponent(
+          sugg.query
+        )}`;
       } else {
         setSearchValue(sugg.query);
         router.push(`/products?search=${encodeURIComponent(sugg.query)}`);
       }
     }
   };
-
   const handleInputKeyDown = (e) => {
     if (!showSuggestions || suggestions.length === 0) {
       if (e.key === "Enter" && searchValue) {
         setShowSuggestions(false);
         if (pathname === "/products") {
-          window.location.href = `/products?search=${encodeURIComponent(searchValue)}`;
+          window.location.href = `/products?search=${encodeURIComponent(
+            searchValue
+          )}`;
         } else {
           router.push(`/products?search=${encodeURIComponent(searchValue)}`);
           setSearchValue("");
@@ -139,7 +151,9 @@ const Header = () => {
       } else if (searchValue) {
         setShowSuggestions(false);
         if (pathname === "/products") {
-          window.location.href = `/products?search=${encodeURIComponent(searchValue)}`;
+          window.location.href = `/products?search=${encodeURIComponent(
+            searchValue
+          )}`;
         } else {
           router.push(`/products?search=${encodeURIComponent(searchValue)}`);
           setSearchValue("");
@@ -155,15 +169,14 @@ const Header = () => {
   return (
     <>
       {/* Overlay */}
-      {(isUserMenuOpen || isMenuOpen) && (
+      {(isUserMenuOpen || isMenuOpen || isNotifOpen) && (
         <div
           className={cn(
-            "fixed inset-0 bg-black bg-opacity-50 z-20 transition-opacity duration-300 md:hidden",
-            { "md:block bg-opacity-0": isUserMenuOpen },
-            {}
+            "fixed inset-0 bg-black bg-opacity-0 z-20 transition-opacity duration-300 "
           )}
           onClick={() => {
             setIsUserMenuOpen(false);
+            setIsNotifOpen(false);
             setIsMenuOpen(false);
           }}
         />
@@ -173,6 +186,7 @@ const Header = () => {
       <header
         onClick={() => {
           setIsUserMenuOpen(false);
+          setIsNotifOpen(false);
           setIsMenuOpen(false);
         }}
         className="sticky top-0 flex justify-between items-center w-full h-16 bg-item_background shadow-md px-6 z-30"
@@ -212,7 +226,9 @@ const Header = () => {
               onClick={() => {
                 if (pathname === "/products") {
                   if (searchValue) {
-                    window.location.href = `/products?search=${encodeURIComponent(searchValue)}`;
+                    window.location.href = `/products?search=${encodeURIComponent(
+                      searchValue
+                    )}`;
                   } else {
                     window.location.href = "/products";
                   }
@@ -272,7 +288,9 @@ const Header = () => {
                           className="break-words whitespace-pre-line flex-1"
                           style={{ wordBreak: "break-word" }}
                         >
-                          {sugg.isBrowseAll ? "Browse all products" : `See more results for ${sugg.query}`}
+                          {sugg.isBrowseAll
+                            ? "Browse all products"
+                            : `See more results for ${sugg.query}`}
                         </span>
                       </>
                     )}
@@ -284,16 +302,133 @@ const Header = () => {
           <div className="flex items-center justify-center gap-1">
             <Link href="/wishlist" className="relative">
               <WishlistIcon />
-              <div className="h-4 w-4 bg-primary rounded-full text-white text-sm flex items-center justify-center absolute -top-[0.5px] -right-[1.1px]">
-                0
-              </div>
+              {user?.wishlist?.length > 0 && (
+                <div className="h-4 w-4 bg-primary rounded-full text-white text-sm flex items-center justify-center absolute -top-[0.5px] -right-[1.1px]">
+                  {user?.wishlist?.length || 0}
+                </div>
+              )}
             </Link>
             <Link href="/cart" className="relative">
               <CartIcon />
-              <div className="h-4 w-4 bg-primary rounded-full text-white text-sm flex items-center justify-center absolute -top-[0.5px] -right-[1.1px]">
-                0
-              </div>
+              {user?.cart?.length > 0 && (
+                <div className="h-4 w-4 bg-primary rounded-full text-white text-sm flex items-center justify-center absolute -top-[0.5px] -right-[1.1px]">
+                  {user?.cart?.length || 0}
+                </div>
+              )}
             </Link>
+            <div className="relative flex items-center justify-center">
+              <button
+                onClick={async (e) => {
+                  e.stopPropagation();
+                  setIsNotifOpen((prev) => !prev);
+                  setIsUserMenuOpen(false);
+                  setIsMenuOpen(false);
+                  const unreadIds =
+                    user?.notifications
+                      ?.filter((n) => !n.read)
+                      .map((n) => n._id) || [];
+                  if (unreadIds.length === 0) return;
+                  // Mark all unread as read
+                  const updated = user.notifications.map((n) =>
+                    unreadIds.includes(n._id) ? { ...n, read: true } : n
+                  );
+
+                  await updateUserData([{ notifications: updated }]);
+                  setUser({ ...user, notifications: updated });
+                }}
+                className="relative"
+              >
+                <NotificationIcon />
+                {(user?.notifications?.filter((n) => !n.read).length || 0) >
+                  0 && (
+                  <div className="h-4 w-4 bg-primary rounded-full text-white text-sm flex items-center justify-center absolute -top-[0.5px] -right-[1.1px]">
+                    {(user?.notifications?.filter((n) => !n.read).length || 0) >
+                    9
+                      ? "9+"
+                      : user?.notifications?.filter((n) => !n.read).length || 0}
+                  </div>
+                )}
+              </button>
+
+              {/* Dropdown panel */}
+              {isNotifOpen && (
+                <div
+                  className="absolute right-0 top-8 w-80 bg-white shadow-xl rounded-md border border-gray-200 z-50 overflow-hidden"
+                  onClick={(e) => e.stopPropagation()}
+                >
+                  <div className="p-3 border-b bg-gray-50 font-semibold text-base text-gray-700">
+                    Notifications
+                  </div>
+                  {(user?.notifications?.length || 0) === 0 ? (
+                    <div className="p-4 text-gray-500 text-[13px] text-center">
+                      No notifications
+                    </div>
+                  ) : (
+                    <ul className="max-h-[400px] overflow-y-auto divide-y divide-gray-100">
+                      {user.notifications
+                        .sort(
+                          (a, b) =>
+                            new Date(b.createdAt) - new Date(a.createdAt)
+                        )
+                        .map((n) => (
+                          <li
+                            key={n._id}
+                            className={`group relative p-3 cursor-pointer hover:bg-gray-50 transition-all duration-150 flex flex-col gap-1 ${
+                              n.read ? "" : "bg-gray-200"
+                            }`}
+                            onClick={async () => {
+                              setIsNotifOpen(false);
+                              if (n.link) window.location.href = n.link;
+                              const updated = user.notifications.filter(
+                                (notif) => notif._id !== n._id
+                              );
+                              await updateUserData([
+                                { notifications: updated },
+                              ]);
+                              setUser({ ...user, notifications: updated });
+                            }}
+                          >
+                            <button
+                              onClick={async (e) => {
+                                e.stopPropagation();
+                                const updated = user.notifications.filter(
+                                  (notif) => notif._id !== n._id
+                                );
+                                await updateUserData([
+                                  { notifications: updated },
+                                ]);
+                                setUser({ ...user, notifications: updated });
+                              }}
+                              className="absolute z-50 border rounded-full px-[6px] top-2 right-2 text-gray-400 hover:text-gray-600 transition"
+                              aria-label="Dismiss notification"
+                            >
+                              ×
+                            </button>
+                            <p className="font-medium text-sm text-gray-800 pr-5 group-hover:translate-x-0.5 transition-transform">
+                              {n.title}
+                            </p>
+                            <p className="text-[13px] text-gray-600 line-clamp-2">
+                              {n.message}
+                            </p>
+                            <span className="text-[10px] text-gray-400 mt-0.5">
+                              {new Date(n.createdAt).toLocaleTimeString([], {
+                                hour: "2-digit",
+                                minute: "2-digit",
+                              })}{" "}
+                              •{" "}
+                              {new Date(n.createdAt).toLocaleDateString([], {
+                                day: "2-digit",
+                                month: "short",
+                              })}
+                            </span>
+                          </li>
+                        ))}
+                    </ul>
+                  )}
+                </div>
+              )}
+            </div>
+
             <div className="relative flex items-center justify-center">
               <div
                 className={cn(
@@ -304,6 +439,7 @@ const Header = () => {
                   e.stopPropagation();
                   if (user) {
                     if (isMenuOpen) setIsMenuOpen(false);
+                    if (isNotifOpen) setIsNotifOpen(false);
                     setIsUserMenuOpen((prev) => !prev);
                   } else {
                     router.push("/login");
@@ -327,6 +463,7 @@ const Header = () => {
               <div
                 onClick={() => {
                   setIsUserMenuOpen(false);
+                  setIsNotifOpen(false);
                 }}
                 className={cn(
                   `hidden absolute top-3 right-2 w-56 z-10000  flex-col z-40  drop-shadow-sm bg-primary bg-opacity-35 backdrop-blur-md rounded-md text-white py-4  pl-4 ${poppins.className} text-[15px]`,
@@ -342,10 +479,10 @@ const Header = () => {
                 </Link>
                 <Link
                   className="flex items-center  gap-3  p-1 hover:border-white hover:scale-[1.01] border-2 border-transparent rounded-md hover:shadow-sm hover:border-opacity-10"
-                  href="/order"
+                  href="/orders"
                 >
                   <OrderIcon />
-                  My Order
+                  My Orders
                 </Link>
                 <Link
                   className="flex items-center  gap-3 p-1 hover:border-white hover:scale-[1.01] border-2 border-transparent rounded-md hover:shadow-sm hover:border-opacity-10"
@@ -359,6 +496,7 @@ const Header = () => {
                   onClick={async () => {
                     setIsLoading(true);
                     await logout();
+                    setUser(null);
                     setIsLoading(false);
                   }}
                 >
@@ -375,6 +513,7 @@ const Header = () => {
             onClick={(e) => {
               e.stopPropagation();
               if (isUserMenuOpen) setIsUserMenuOpen(false);
+              if (isNotifOpen) setIsNotifOpen(false);
               toggleMenu();
             }}
             aria-label="Toggle menu"

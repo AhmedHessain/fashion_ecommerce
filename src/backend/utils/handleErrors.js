@@ -93,6 +93,7 @@ const handleCatch = (unhandledCatch) => {
 
 export const handleServerActionCatch = (unhandledServerActionCatch) => {
   const err = handleCatch(unhandledServerActionCatch);
+  console.error("Server Action Error:", err);
   return {
     state: err.state,
     status: err.status,

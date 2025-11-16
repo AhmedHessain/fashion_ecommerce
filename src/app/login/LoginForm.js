@@ -9,8 +9,11 @@ import CustomInput from "@/Components/CustomInput";
 import { login } from "../actions";
 import GoogleProvider from "@/Components/Google Provider";
 import { useGlobalLoading } from "@/context/loadingContext";
+import { useUser } from "@/context/userContext";
+import { useRouter } from "next/navigation";
 const LoginForm = ({ nextAuthError }) => {
   const [showPassword, setShowPassword] = useState(false);
+  const { user, setUser } = useUser();
   const [error, setError] = useState("");
   const { setIsLoading } = useGlobalLoading();
   const {
@@ -21,7 +24,10 @@ const LoginForm = ({ nextAuthError }) => {
     resolver: zodResolver(loginFormSchema),
     mode: "onSubmit",
   });
-
+  const router = useRouter();
+  useEffect(() => {
+    setUser(null);
+  }, [setUser]);
   const onSubmit = async (data) => {
     try {
       setIsLoading(true);
@@ -29,11 +35,13 @@ const LoginForm = ({ nextAuthError }) => {
       formData.append("email", data.email);
       formData.append("password", data.password);
 
-      const error = await login(formData);
-      if (error) {
-        setError(error.message);
-      } else {
+      const res = await login(formData);
+      if (res.ok) {
+        router.push("/");
+        setUser(res.user);
         setError("");
+      } else {
+        setError(res.message);
       }
     } catch (err) {
       setError(err);
@@ -72,6 +80,7 @@ const LoginForm = ({ nextAuthError }) => {
           label="Email"
           control={control}
           errors={errors}
+          showSuccess={false}
         />
         <CustomInput
           name="password"
@@ -81,11 +90,12 @@ const LoginForm = ({ nextAuthError }) => {
           type="password"
           showPassword={showPassword}
           setShowPassword={setShowPassword}
+          showSuccess={false}
         />
         <button className="bg-primary px-12 h-[50px] rounded text-white text-l w-full hover:bg-primary hover:bg-opacity-75 mt-2">
           Sign in
         </button>
-        {error && <p className="text-red-400">{error}</p>}
+        {error && <p className="text-red-400 w-[400px] h-64]">{error}</p>}
         <Link className="text-primary underline w-fit" href="/forget-password">
           Forget Password?{" "}
         </Link>

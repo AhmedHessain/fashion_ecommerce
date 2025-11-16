@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { useForm } from "react-hook-form";
 import { zodResolver } from "@hookform/resolvers/zod";
 import { signupFormSchema } from "@/utils/schema";
@@ -16,13 +16,16 @@ import { validateImage } from "@/utils/utilFunctions";
 import { signup } from "../actions";
 import GoogleProvider from "@/Components/Google Provider";
 import { useGlobalLoading } from "@/context/loadingContext";
-
+import { useUser } from "@/context/userContext";
+import { useRouter } from "next/navigation";
 const SignUpForm = () => {
   const { setIsLoading } = useGlobalLoading();
   const [showPassword, setShowPassword] = useState(false);
   const [image, setImage] = useState("");
   const [warning, setWarning] = useState(false);
   const [error, setError] = useState("");
+  const { user, setUser } = useUser();
+  const router = useRouter();
   const {
     control,
     handleSubmit,
@@ -37,6 +40,10 @@ const SignUpForm = () => {
       setImage(file);
     }
   };
+  useEffect(() => {
+    setUser(null);
+  }, [setUser]);
+
   const onSubmit = async (data) => {
     try {
       setIsLoading(true);
@@ -45,11 +52,13 @@ const SignUpForm = () => {
       formData.append("email", data.email);
       formData.append("password", data.password);
       formData.append("image", image);
-      const error = await signup(formData);
-      if (error) {
-        setError(error.message);
-      } else {
+      const res = await signup(formData);
+      if (res.ok) {
+        router.push("/");
+        setUser(res.user);
         setError("");
+      } else {
+        setError(res.message);
       }
     } catch (error) {
       setError(error.message);

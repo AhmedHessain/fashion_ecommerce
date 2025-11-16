@@ -89,3 +89,67 @@ export const contactFormSchema = z.object({
     .regex(/^\+?[0-9]{10,15}$/, "Please enter a valid phone number"),
   message: z.string().min(1, "Message is required"),
 });
+
+export const addressSchema = z.object({
+  firstName: z
+    .string()
+    .min(1, "First name is required")
+    .regex(/^[A-Za-z\s'-]{2,40}$/, "Please enter a valid first name"),
+  lastName: z
+    .string()
+    .min(1, "Last name is required")
+    .regex(/^[A-Za-z\s'-]{2,40}$/, "Please enter a valid last name"),
+  companyName: z.string().optional(),
+  streetAddress: z
+    .string()
+    .min(1, "Street address is required")
+    .regex(/^[A-Za-z0-9\s,'-]{5,100}$/, "Please enter a valid street address"),
+  apartment: z.string().optional(),
+  city: z
+    .string()
+    .min(1, "City is required")
+    .regex(/^[A-Za-z\s'-]{2,60}$/, "Please enter a valid city"),
+  postalCode: z
+    .string()
+    .min(1, "Postal code is required")
+    .regex(/^[0-9A-Za-z\s-]{4,10}$/, "Please enter a valid postal code"),
+  country: z
+    .string()
+    .min(1, "Country is required")
+    .regex(/^[A-Za-z\s'-]{2,60}$/, "Please enter a valid country"),
+  phone: z
+    .string()
+    .min(1, "Phone number is required")
+    .regex(/^\+?[0-9]{10,15}$/, "Please enter a valid phone number"),
+});
+
+export const changePasswordSchema = z
+  .object({
+    currentPassword: z
+      .string()
+      .min(1, { message: "Current password is required" }),
+    newPassword: z
+      .string()
+      .min(1, { message: "New password is required" })
+      .min(8, { message: "Password must be at least 8 characters long" })
+      .regex(/[a-z]/, {
+        message: "Password must include at least one lowercase letter",
+      })
+      .regex(/[A-Z]/, {
+        message: "Password must include at least one uppercase letter",
+      })
+      .regex(/[0-9]/, { message: "Password must include at least one number" })
+      .regex(/[@$!%*#?&]/, {
+        message: "Password must include at least one special character",
+      }),
+    confirmPassword: z.string(),
+  })
+  .superRefine(({ newPassword, confirmPassword }, ctx) => {
+    if (newPassword !== confirmPassword) {
+      ctx.addIssue({
+        code: z.ZodIssueCode.custom,
+        message: "Passwords must match",
+        path: ["confirmPassword"],
+      });
+    }
+  });

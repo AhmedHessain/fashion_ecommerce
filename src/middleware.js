@@ -4,7 +4,7 @@ import { cookies } from "next/headers";
 import { checkRoutes } from "./utils/utilFunctions";
 
 // 1. Specify protected and public routes (public routes won't appear for authenticated users)
-const protectedRoutes = ["/", "/about", "/contact"];
+const protectedRoutes = ["/", "/about", "/contact", "/wishlist"];
 const publicRoutes = [
   "/login",
   "/register",

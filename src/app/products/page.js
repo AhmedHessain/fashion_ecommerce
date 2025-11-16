@@ -12,48 +12,32 @@ import {
   Chip,
 } from "@mui/material";
 import cn from "@/utils/cn";
-import productsData from "@/data/ProductsData.json";
 import { useRouter, useSearchParams } from "next/navigation";
 
-const categories = [
-  "Accessories",
-  "Bags",
-  "Perfumes",
-  "Shoes",
-  "Trousers",
-  "Tops",
-];
-
-// Extract unique tags from products
-const allTags = [
-  ...new Set(productsData.products.flatMap((product) => product.tags)),
-];
-
 const ITEMS_PER_PAGE = 8;
-const INITIAL_TAGS_SHOWN = 5;
 
 // Get min and max prices from products
-const prices = productsData.products.map((product) => product.price);
 const MIN_PRICE = 0;
-const MAX_PRICE = Math.ceil(Math.max(...prices));
 
 export default function ProductsPage() {
   const router = useRouter();
   const searchParams = useSearchParams();
 
+  const [allTags, setAllTags] = useState([]);
+  const [MAX_PRICE, setMaxPrice] = useState(undefined);
   const [products, setProducts] = useState([]);
   const [loadingTimes, setLoadingTimes] = useState(0);
   const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
   const [selectedCategories, setSelectedCategories] = useState([]);
   const [selectedTags, setSelectedTags] = useState([]);
-  const [priceRange, setPriceRange] = useState([MIN_PRICE, MAX_PRICE]);
+  const [priceRange, setPriceRange] = useState([0, 0]);
   const [searchQuery, setSearchQuery] = useState("");
   const [sortBy, setSortBy] = useState("featured");
   const [page, setPage] = useState(1);
   const [hasMore, setHasMore] = useState(true);
   const [urlParsed, setUrlParsed] = useState(false);
-  console.log(loadingTimes);
+  const [categories, setCategories] = useState([]);
   // Tag search states
   const [tagInputValue, setTagInputValue] = useState("");
   const [selectedIndex, setSelectedIndex] = useState(-1);
@@ -65,6 +49,29 @@ export default function ProductsPage() {
     const single = searchParams.get(param);
     return single ? [single] : [];
   };
+
+  useEffect(() => {
+    const loadMeta = async () => {
+      try {
+        const res = await fetch("/api/products/meta");
+        const data = await res.json();
+        const meta = data.metadata || {};
+        const tags = meta.tags || [];
+        const cats = meta.categories || [];
+
+        const max = meta.priceStats?.maxPrice ?? 0;
+        setAllTags(tags);
+        setCategories(cats);
+        setMaxPrice(max);
+        setPriceRange([MIN_PRICE, max]);
+      } catch (e) {
+        console.error("Failed to load metadata:", e);
+        setError("Failed to load filters");
+      }
+    };
+
+    loadMeta();
+  }, []);
 
   // Parse initial state from URL
   useEffect(() => {
@@ -90,7 +97,7 @@ export default function ProductsPage() {
   // Update URL when filters change (but only after initial URL parsing)
   useEffect(() => {
     if (!urlParsed) return; // Don't update URL during initial parsing
-    
+
     const params = new URLSearchParams();
     // Categories
     selectedCategories.forEach((cat) => params.append("category", cat));
@@ -106,7 +113,14 @@ export default function ProductsPage() {
     // Do NOT set page in URL
     router.replace(`?${params.toString()}`, { scroll: false });
     // eslint-disable-next-line
-  }, [selectedCategories, selectedTags, priceRange, searchQuery, sortBy, urlParsed]);
+  }, [
+    selectedCategories,
+    selectedTags,
+    priceRange,
+    searchQuery,
+    sortBy,
+    urlParsed,
+  ]);
 
   const buildQueryString = useCallback(() => {
     const params = new URLSearchParams();
@@ -234,15 +248,6 @@ export default function ProductsPage() {
     return 0;
   });
 
-  // Get sorted tags with selected ones at the top
-  const sortedTags = [...allTags].sort((a, b) => {
-    const aSelected = selectedTags.includes(a);
-    const bSelected = selectedTags.includes(b);
-    if (aSelected && !bSelected) return -1;
-    if (!aSelected && bSelected) return 1;
-    return 0;
-  });
-
   // Handle keyboard navigation
   const handleKeyDown = (e) => {
     const filteredTags = allTags
@@ -295,18 +300,25 @@ export default function ProductsPage() {
   // Initial fetch and filter changes
   useEffect(() => {
     if (!urlParsed) return; // Wait for URL parsing to complete
-    
+
     setPage(1);
     setProducts([]); // Clear existing products when filters change
     fetchProducts(true);
-  }, [selectedCategories, selectedTags, priceRange, searchQuery, sortBy, urlParsed]); //adding fetchProducts to dependencies will fuck the scrolling
+  }, [
+    selectedCategories,
+    selectedTags,
+    priceRange,
+    searchQuery,
+    sortBy,
+    urlParsed,
+  ]); //adding fetchProducts to dependencies will fuck the scrolling
 
   // Initial fetch after URL parsing
   useEffect(() => {
     if (urlParsed) {
       fetchProducts(true);
     }
-  }, [urlParsed, fetchProducts]);
+  }, [urlParsed]);
 
   // Load more on scroll
   const handleScroll = () => {
@@ -335,7 +347,7 @@ export default function ProductsPage() {
     if (page > 1) {
       fetchProducts();
     }
-  }, [page, fetchProducts]);
+  }, [page]);
 
   return (
     <div className="container mx-auto px-4 py-8">

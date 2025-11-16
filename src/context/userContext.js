@@ -1,14 +1,23 @@
-// context/UserContext.tsx
 "use client";
 
-import { createContext, useContext } from "react";
+import { useState, createContext, useContext } from "react";
 
 const UserContext = createContext(null);
 
-export function UserProvider({ children, user }) {
-  return <UserContext.Provider value={user}>{children}</UserContext.Provider>;
+export function UserProvider({ currentUser, children }) {
+  const [user, setUser] = useState(currentUser);
+
+  return (
+    <UserContext.Provider value={{ user, setUser }}>
+      {children}
+    </UserContext.Provider>
+  );
 }
 
 export function useUser() {
-  return useContext(UserContext);
+  const context = useContext(UserContext);
+  if (!context) {
+    throw new Error("useUser must be used within a UserProvider");
+  }
+  return context;
 }
