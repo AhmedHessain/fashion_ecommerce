@@ -8,7 +8,6 @@ import UpArrow from "@/../public/upArrow.svg";
 import DownArrow from "@/../public/downArrow.svg";
 import TrashIcon from "@/../public/trashIcon.svg";
 import DeliveryIcon from "@/../public/icon-delivery.svg";
-import ReturnIcon from "@/../public/icon-return.svg";
 import Link from "next/link";
 import JustForYouProducts from "@/Components/Products/JustForYouProducts";
 const poppins = Poppins({
@@ -26,7 +25,7 @@ const Cart = () => {
 
   const updateCart = (productId, newQuantity) => {
     const updatedUserCart = user.cart.map((c) =>
-      c.product === productId ? { ...c, quantity: newQuantity } : c
+      c.product === productId ? { ...c, quantity: newQuantity } : c,
     );
     setUser({ ...user, cart: updatedUserCart });
 
@@ -137,7 +136,7 @@ const Cart = () => {
                         onClick={() =>
                           updateCart(
                             cartItem.product,
-                            Math.max(cartItem.quantity - 1, 1)
+                            Math.max(cartItem.quantity - 1, 1),
                           )
                         }
                       >
@@ -152,7 +151,7 @@ const Cart = () => {
                         onChange={(e) =>
                           updateCart(
                             cartItem.product,
-                            Math.max(1, Number(e.target.value))
+                            Math.max(1, Number(e.target.value)),
                           )
                         }
                       />
@@ -162,7 +161,7 @@ const Cart = () => {
                         onClick={() =>
                           updateCart(
                             cartItem.product,
-                            Math.min(cartItem.quantity + 1, product.quantity)
+                            Math.min(cartItem.quantity + 1, product.quantity),
                           )
                         }
                       >
@@ -239,7 +238,12 @@ const Cart = () => {
               </div>
             </div>
             <div className="flex gap-4 items-center bg-primary bg-opacity-25 px-6 py-2 rounded">
-              <ReturnIcon />
+              <Image
+                src="/icon-return.svg"
+                alt="Return Icon"
+                width={20}
+                height={20}
+              />
               <div className="flex flex-col">
                 <h3 className="text-l">Return Delivery</h3>
                 <p className="text-base">Free 30 Days Delivery Returns.</p>
