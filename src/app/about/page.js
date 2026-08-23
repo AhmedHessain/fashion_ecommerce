@@ -99,15 +99,6 @@ const About = () => {
           twitter="https://www.twitter.com"
           instagram="https://www.instagram.com"
         />
-        <Social
-          name="Mōri Ran"
-          image="/ran.png"
-          position="Founder & CEO"
-          facebook="https://www.facebook.com"
-          linkedin="https://www.linkedin.com"
-          twitter="https://www.twitter.com"
-          instagram="https://www.instagram.com"
-        />
       </div>
       <Services />
     </section>

@@ -46,7 +46,7 @@ const Footer = () => {
           <h3 className={`text-[20px] font-medium ${poppins.className}`}>
             Account
           </h3>
-          <Link href="/">My Account</Link>
+          <Link href="./account">My Account</Link>
           <Link href="./cart">Cart</Link>
           <Link href="./wishlist">Wishlist</Link>
           <Link href="/products">Shop</Link>

@@ -1,32 +1,17 @@
 import { catchAsync } from "@/backend/utils/captureErrors";
 import AppError from "@/backend/utils/AppError";
 import User from "@/backend/model/userModel";
-import { decryptAccessToken } from "../session";
-import { headers } from "next/headers";
 import ResetToken from "../model/resetTokenModel";
 import dbConnect from "../db";
 import argon2 from "argon2";
-import { NextResponse } from "next/server";
+import { getUserFromAccessOrRefreshToken } from "@/backend/utils/auth";
+
 export const protect = catchAsync(async (req, event, next) => {
   await dbConnect();
-  const authorization = headers().get("authorization");
-  if (!authorization || !authorization.startsWith("Bearer ")) {
-    throw new AppError("Unauthorized route.", 401);
+  const user = await getUserFromAccessOrRefreshToken();
+  if (!user || user.role !== "admin") {
+    throw new AppError("Not authorized to access this route", 401);
   }
-
-  const token = authorization.split(" ")[1];
-
-  if (!token) {
-    throw new AppError("Missing token.", 401);
-  }
-
-  const accessTokenPayload = await decryptAccessToken(token);
-
-  if (!accessTokenPayload?.userId)
-    throw new AppError("Expired or invalid token", 401);
-
-  req.currentUserId = accessTokenPayload.userId;
-
   return next();
 });
 

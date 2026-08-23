@@ -37,7 +37,11 @@ const LoginForm = ({ nextAuthError }) => {
 
       const res = await login(formData);
       if (res.ok) {
-        router.push("/");
+        if (res.user.role === "admin") {
+          router.push("/dashboard");
+        } else {
+          router.push("/");
+        }
         setUser(res.user);
         setError("");
       } else {
