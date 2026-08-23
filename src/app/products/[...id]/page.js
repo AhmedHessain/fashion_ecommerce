@@ -8,7 +8,6 @@ import { updateUserData } from "@/app/actions";
 import { motion } from "framer-motion";
 import { useUser } from "@/context/userContext";
 import DeliveryIcon from "@/../public/icon-delivery.svg";
-import ReturnIcon from "@/../public/icon-return.svg";
 import LeftArrowIcon from "@/../public/to-left-arrow-icon.svg";
 import RightArrowIcon from "@/../public/to-right-arrow-icon.svg";
 import Image from "next/image";
@@ -52,13 +51,13 @@ const ProductPage = () => {
     fetchProductDetails();
   }, [id]);
   const isInCart = user?.cart?.some(
-    (item) => item.product.toString() === product._id
+    (item) => item.product.toString() === product._id,
   );
   useEffect(() => {
     if (!user || !product._id) return;
 
     const existingItem = user.cart?.find(
-      (item) => item.product.toString() === product._id
+      (item) => item.product.toString() === product._id,
     );
 
     if (existingItem) {
@@ -203,7 +202,7 @@ const ProductPage = () => {
                       className="px-5 border rounded-r flex items-center cursor-pointer bg-primary text-white"
                       onClick={() =>
                         setQuantity((prev) =>
-                          Math.min(prev + 1, product.quantity)
+                          Math.min(prev + 1, product.quantity),
                         )
                       }
                     >
@@ -227,7 +226,7 @@ const ProductPage = () => {
                               const updatedCart = user.cart.map((item) =>
                                 item.product.toString() === product._id
                                   ? { ...item, quantity }
-                                  : item
+                                  : item,
                               );
                               setUser({ ...user, cart: updatedCart });
                               await updateUserData([{ cart: updatedCart }]);
@@ -240,7 +239,7 @@ const ProductPage = () => {
                             onClick={async () => {
                               const updatedCart = user.cart.filter(
                                 (item) =>
-                                  item.product.toString() !== product._id
+                                  item.product.toString() !== product._id,
                               );
                               setUser({ ...user, cart: updatedCart });
                               await updateUserData([{ cart: updatedCart }]);
@@ -285,7 +284,7 @@ const ProductPage = () => {
                         setIsAnimating(true);
 
                         const alreadyWishlisted = user.wishlist.includes(
-                          product._id
+                          product._id,
                         );
                         const updatedWishlist = alreadyWishlisted
                           ? user.wishlist.filter((id) => id !== product._id)
@@ -351,7 +350,12 @@ const ProductPage = () => {
                     </div>
                   </div>
                   <div className="flex gap-5 items-center pl-3 py-3 border border-t-0 border-black border-opacity-50 rounded-b">
-                    <ReturnIcon />
+                    <Image
+                      src="/icon-return.svg"
+                      alt="Return Icon"
+                      width={20}
+                      height={20}
+                    />
                     <div className="flex flex-col">
                       <h4
                         className={`${poppins.className} font-medium text-base`}
@@ -383,7 +387,7 @@ const ProductPage = () => {
             onClick={(e) => {
               e.stopPropagation();
               setImageToZoom((prev) =>
-                prev + 1 > product.allImages.length - 1 ? 0 : prev + 1
+                prev + 1 > product.allImages.length - 1 ? 0 : prev + 1,
               );
             }}
           >
@@ -414,7 +418,7 @@ const ProductPage = () => {
             onClick={(e) => {
               e.stopPropagation();
               setImageToZoom((prev) =>
-                prev - 1 < 0 ? product.allImages.length - 1 : prev - 1
+                prev - 1 < 0 ? product.allImages.length - 1 : prev - 1,
               );
             }}
           >

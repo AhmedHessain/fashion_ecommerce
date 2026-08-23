@@ -62,10 +62,10 @@ export async function createSession(userId) {
   const refreshToken = await encryptRefreshToken({ userId });
 
   const accessExpiresAt = new Date(
-    Date.now() + parseInt(accessTokenExpirationDate) * 60 * 1000
+    Date.now() + parseInt(accessTokenExpirationDate) * 60 * 1000,
   );
   const refreshExpiresAt = new Date(
-    Date.now() + parseInt(refreshTokenExpirationDate) * 24 * 60 * 60 * 1000
+    Date.now() + parseInt(refreshTokenExpirationDate) * 24 * 60 * 60 * 1000,
   );
 
   // Store refresh token in DB
@@ -117,7 +117,7 @@ export async function refreshAccessToken(req) {
   const { newAccessToken } = await response.json();
 
   const accessExpiresAt = new Date(
-    Date.now() + parseInt(accessTokenExpirationDate) * 60 * 1000
+    Date.now() + parseInt(accessTokenExpirationDate) * 60 * 1000,
   );
 
   const options = {

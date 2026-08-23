@@ -1,10 +1,9 @@
 import { NextResponse } from "next/server";
-import { decryptAccessToken, refreshAccessToken } from "@/backend/session";
-import { cookies } from "next/headers";
+import { decryptAccessToken } from "@/backend/sessionEdge";
 import { checkRoutes } from "./utils/utilFunctions";
 
-// 1. Specify protected and public routes (public routes won't appear for authenticated users)
 const protectedRoutes = ["/", "/about", "/contact", "/wishlist"];
+
 const publicRoutes = [
   "/login",
   "/register",
@@ -13,34 +12,76 @@ const publicRoutes = [
 ];
 
 export default async function middleware(req) {
-  // 2. Check if the current route is protected or public
   const path = req.nextUrl.pathname;
+
   const isProtectedRoute = checkRoutes(protectedRoutes, path);
   const isPublicRoute = checkRoutes(publicRoutes, path);
-  // 3. Decrypt the accessTokenPayload from the cookie
-  const cookie = cookies().get("accessToken")?.value;
 
-  const accessTokenPayload = await decryptAccessToken(cookie);
+  const accessToken = req.cookies.get("accessToken")?.value;
 
-  if (!accessTokenPayload) {
-    const res = await refreshAccessToken(req);
-    if (res) return res;
+  const accessTokenPayload = await decryptAccessToken(accessToken);
+
+  /*
+   * Access token is valid
+   */
+  if (accessTokenPayload?.userId) {
+    if (isPublicRoute) {
+      return NextResponse.redirect(new URL("/", req.url));
+    }
+
+    return NextResponse.next();
   }
 
-  // 4. Redirect to /login if the user is not authenticated and in protected route
-  if (isProtectedRoute && !accessTokenPayload?.userId) {
-    return NextResponse.redirect(new URL("/login", req.nextUrl));
+  /*
+   * Access token is invalid/expired.
+   *
+   * We DON'T touch MongoDB here.
+   *
+   * Instead, let the refresh API route handle
+   * refresh-token validation and rotation.
+   */
+  const refreshToken = req.cookies.get("refreshToken")?.value;
+
+  if (refreshToken) {
+    const refreshResponse = await fetch(new URL("/api/refreshToken", req.url), {
+      method: "POST",
+      headers: {
+        authorization: `Bearer ${refreshToken}`,
+      },
+    });
+
+    if (refreshResponse.ok) {
+      const data = await refreshResponse.json();
+
+      const response = NextResponse.next();
+
+      response.cookies.set("accessToken", data.newAccessToken, {
+        httpOnly: true,
+        secure: true,
+        sameSite: "lax",
+        path: "/",
+        maxAge: parseInt(process.env.ACCESS_TOKEN_EXPIRATION_DATE) * 60,
+      });
+
+      return response;
+    }
   }
 
-  // 5. Redirect to / if the user is authenticated and in public route
-  if (isPublicRoute && accessTokenPayload?.userId) {
-    return NextResponse.redirect(new URL("/", req.nextUrl));
+  /*
+   * No valid access token and no successful refresh.
+   */
+  if (isProtectedRoute) {
+    const response = NextResponse.redirect(new URL("/login", req.url));
+
+    response.cookies.delete("accessToken");
+    response.cookies.delete("refreshToken");
+
+    return response;
   }
 
   return NextResponse.next();
 }
 
-// Routes Middleware should not run on
 export const config = {
   matcher: ["/((?!api|_next/static|_next/image|.*\\.png$).*)"],
 };

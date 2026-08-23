@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import GoogleIcon from "@/../public/icon-google.svg";
+import Image from "next/image";
 import { signIn } from "next-auth/react";
 
 const GoogleProvider = ({ setIsLoading, text, callbackUrl, nextAuthError }) => {
@@ -35,7 +35,12 @@ const GoogleProvider = ({ setIsLoading, text, callbackUrl, nextAuthError }) => {
             signIn("google", { callbackUrl });
           }}
         >
-          <GoogleIcon />
+          <Image
+            src="/icon-google.svg"
+            alt="Google Icon"
+            width={20}
+            height={20}
+          />{" "}
           {text}
         </button>
         {error && <p className="text-red-500">Some error occurred</p>}
