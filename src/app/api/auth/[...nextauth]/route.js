@@ -8,6 +8,8 @@ import startAsyncTransaction from "@/backend/utils/startAsyncTransaction";
 import dbConnect from "@/backend/db";
 
 const handler = NextAuth({
+  secret: process.env.NEXTAUTH_SECRET,
+
   providers: [
     GoogleProvider({
       clientId: process.env.GOOGLE_CLIENT_ID,
@@ -32,7 +34,7 @@ const handler = NextAuth({
                   password: "00000000",
                 },
               ],
-              { session: session }
+              { session: session },
             );
             user = users[0];
             if (user && picture) {
@@ -40,7 +42,7 @@ const handler = NextAuth({
               if (!imageUrl) {
                 throw new AppError(
                   "Problem occured with image upload process",
-                  500
+                  500,
                 );
               }
               user.imageUrl = imageUrl;
