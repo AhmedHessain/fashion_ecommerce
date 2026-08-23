@@ -8,6 +8,7 @@ import UpArrow from "@/../public/upArrow.svg";
 import DownArrow from "@/../public/downArrow.svg";
 import TrashIcon from "@/../public/trashIcon.svg";
 import DeliveryIcon from "@/../public/icon-delivery.svg";
+import ReturnIcon from "@/../public/icon-return.svg";
 import Link from "next/link";
 import JustForYouProducts from "@/Components/Products/JustForYouProducts";
 const poppins = Poppins({
@@ -238,12 +239,7 @@ const Cart = () => {
               </div>
             </div>
             <div className="flex gap-4 items-center bg-primary bg-opacity-25 px-6 py-2 rounded">
-              <Image
-                src="/icon-return.svg"
-                alt="Return Icon"
-                width={20}
-                height={20}
-              />
+              <ReturnIcon />
               <div className="flex flex-col">
                 <h3 className="text-l">Return Delivery</h3>
                 <p className="text-base">Free 30 Days Delivery Returns.</p>

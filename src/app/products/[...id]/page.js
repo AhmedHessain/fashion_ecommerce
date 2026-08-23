@@ -8,6 +8,7 @@ import { updateUserData } from "@/app/actions";
 import { motion } from "framer-motion";
 import { useUser } from "@/context/userContext";
 import DeliveryIcon from "@/../public/icon-delivery.svg";
+import ReturnIcon from "@/../public/icon-return.svg";
 import LeftArrowIcon from "@/../public/to-left-arrow-icon.svg";
 import RightArrowIcon from "@/../public/to-right-arrow-icon.svg";
 import Image from "next/image";
@@ -350,12 +351,7 @@ const ProductPage = () => {
                     </div>
                   </div>
                   <div className="flex gap-5 items-center pl-3 py-3 border border-t-0 border-black border-opacity-50 rounded-b">
-                    <Image
-                      src="/icon-return.svg"
-                      alt="Return Icon"
-                      width={20}
-                      height={20}
-                    />
+                    <ReturnIcon />
                     <div className="flex flex-col">
                       <h4
                         className={`${poppins.className} font-medium text-base`}
