@@ -18,7 +18,7 @@
     "@mui/material-nextjs": "^6.1.0",
     "@reduxjs/toolkit": "^2.2.7",
     "@types/mongoose": "^5.11.97",
-    "argon2": "^0.41.1",
+    "argon2": "0.31.2",
     "cloudinary": "^2.5.0",
     "framer-motion": "^12.18.1",
     "jose": "^5.9.3",
