@@ -4,7 +4,7 @@ import { NextResponse } from "next/server";
 import { catchAsync } from "@/backend/utils/captureErrors.js";
 import mongoose from "mongoose";
 import { GetCurrentUser } from "@/app/actions.js";
-
+import dbconnect from "../db/index.js";
 export const getAllProducts = factory.getAllDocs(Product);
 
 export const getProductById = factory.getDocById(Product, "reviews");
@@ -47,7 +47,6 @@ export const deleteProduct = factory.deleteDoc(Product);
 export const getHighestTenSoldProducts = catchAsync(
   async (req, event, next) => {
     await dbconnect();
-
     const products = await Product.find().sort({ numOfSales: -1 }).limit(8);
     return NextResponse.json({
       status: "success",
