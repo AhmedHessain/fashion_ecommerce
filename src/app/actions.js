@@ -38,7 +38,7 @@ export const signup = catchAsyncServerActions(async (formData) => {
           password,
         },
       ],
-      { session: session }
+      { session: session },
     );
     user = users[0];
     if (user && image) {
@@ -116,7 +116,7 @@ export const forgetPassword = catchAsyncServerActions(async (formData) => {
           resetToken: hashedResetToken,
         },
       ],
-      { session: session }
+      { session: session },
     );
 
     const resetURL = `${process.env.HOST}/reset-password/${user._id}/${resetToken}`;
@@ -183,16 +183,16 @@ export const updateUserData = catchAsyncServerActions(
 
     const user = JSON.parse(JSON.stringify(userDoc));
     return user;
-  }
+  },
 );
 export const sendContactFormMessage = catchAsyncServerActions(
   async (formData) => {
     const { name, email, phone, message } = Object.fromEntries(formData);
     console.log(
-      `Contact Form Submission: Name: ${name}, Email: ${email}, Phone: ${phone}, Message: ${message}`
+      `Contact Form Submission: Name: ${name}, Email: ${email}, Phone: ${phone}, Message: ${message}`,
     );
     await sendContactFormEmail({ name, email, phone, message });
-  }
+  },
 );
 export async function createOrder(userId, { addressId, paymentMethod }) {
   await dbConnect();
@@ -224,7 +224,7 @@ export async function createOrder(userId, { addressId, paymentMethod }) {
   // Calculate total
   const totalAmount = items.reduce(
     (sum, item) => sum + item.price * item.quantity,
-    0
+    0,
   );
 
   // Create order

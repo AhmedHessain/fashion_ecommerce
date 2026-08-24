@@ -3,7 +3,7 @@ import AppError from "../utils/AppError";
 import QueryBuilder from "../utils/queryBuilder";
 import { NextResponse } from "next/server";
 import qs from "qs";
-
+import dbconnect from "../db/index.js";
 //  * 🧩 Example Usage deleteDoc
 //  *   // Single delete:
 //  *   DELETE /api/products/671b3e89f1c5d9c6e9a7b001
@@ -17,6 +17,8 @@ import qs from "qs";
 
 export const deleteDoc = (model) =>
   catchAsync(async (req, event, next) => {
+    await dbconnect();
+
     const { id, ids } = event.params || {};
     const body = !id && !ids ? await req?.json() : {};
 
@@ -26,7 +28,7 @@ export const deleteDoc = (model) =>
     if (!docIds || !Array.isArray(docIds) || docIds.length === 0) {
       throw new AppError(
         "Please provide a document ID or an array of IDs to delete.",
-        400
+        400,
       );
     }
 
@@ -51,12 +53,14 @@ export const deleteDoc = (model) =>
         deletedCount: result.deletedCount,
         message: `${result.deletedCount} documents deleted successfully.`,
       },
-      { status: 204 }
+      { status: 204 },
     );
   });
 
 export const getAllDocs = (model, fn) =>
   catchAsync(async (req, event, next) => {
+    await dbconnect();
+
     const url = new URL(req.url);
     const queryString = url.searchParams.toString();
     const queryObj = qs.parse(queryString);
@@ -75,12 +79,13 @@ export const getAllDocs = (model, fn) =>
         results: docs.length,
         data: docs,
       },
-      { status: 200 }
+      { status: 200 },
     );
   });
 
 export const getDocById = (model, populate = "") =>
   catchAsync(async (req, event, next) => {
+    await dbconnect();
     const { id } = event.params;
 
     const doc = await model.findById(id).populate(populate);
@@ -97,6 +102,7 @@ export const getDocById = (model, populate = "") =>
 
 export const addDoc = (model, fn) =>
   catchAsync(async (req, event, next) => {
+    await dbconnect();
     const body = await req.json();
 
     // Use `fn` to filter/modify the body, or default to the parsed body
@@ -109,7 +115,7 @@ export const addDoc = (model, fn) =>
         status: "success",
         data: doc,
       },
-      { status: 201 }
+      { status: 201 },
     );
   });
 
@@ -131,6 +137,7 @@ export const addDoc = (model, fn) =>
 
 export const updateDoc = (model, excludedFields = []) =>
   catchAsync(async (req, event, next) => {
+    await dbconnect();
     const { id, ids } = event.params || {}; // in case one comes from route
     const body = await req.json();
     // Normalize: support both param and body array
@@ -138,13 +145,13 @@ export const updateDoc = (model, excludedFields = []) =>
     if (!docIds || !Array.isArray(docIds) || docIds.length === 0) {
       throw new AppError(
         "Please provide a document ID or an array of IDs.",
-        400
+        400,
       );
     }
 
     // Get valid model fields
     const verifiedFields = Object.keys(model.schema.paths).filter(
-      (path) => !excludedFields.includes(path)
+      (path) => !excludedFields.includes(path),
     );
 
     // Only pick allowed fields from body
@@ -170,14 +177,14 @@ export const updateDoc = (model, excludedFields = []) =>
           status: "success",
           data: updatedDoc,
         },
-        { status: 200 }
+        { status: 200 },
       );
     }
 
     // --- MULTI-DOCUMENT UPDATE ---
     const result = await model.updateMany(
       { _id: { $in: docIds } },
-      { $set: updateData }
+      { $set: updateData },
     );
 
     return NextResponse.json(
@@ -187,6 +194,6 @@ export const updateDoc = (model, excludedFields = []) =>
         modifiedCount: result.modifiedCount,
         message: `${result.modifiedCount} documents updated successfully.`,
       },
-      { status: 200 }
+      { status: 200 },
     );
   });

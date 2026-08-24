@@ -46,16 +46,20 @@ export const deleteProduct = factory.deleteDoc(Product);
 
 export const getHighestTenSoldProducts = catchAsync(
   async (req, event, next) => {
+    await dbconnect();
+
     const products = await Product.find().sort({ numOfSales: -1 }).limit(8);
     return NextResponse.json({
       status: "success",
       results: products.length,
       products: products,
     });
-  }
+  },
 );
 
 export const getProductMetadata = catchAsync(async (req, event, next) => {
+  await dbconnect();
+
   const aggregation = await Product.aggregate([
     {
       $facet: {
@@ -110,7 +114,7 @@ export const getRecommendedProducts = catchAsync(async (req, event, next) => {
   const excludedIds = [
     ...(user?.wishlist ?? []).map((id) => new mongoose.Types.ObjectId(id)),
     ...(user?.cart ?? []).map(
-      (item) => new mongoose.Types.ObjectId(item.product)
+      (item) => new mongoose.Types.ObjectId(item.product),
     ),
     ...(id ? [new mongoose.Types.ObjectId(id)] : []),
   ];
