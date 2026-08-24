@@ -54,7 +54,7 @@ const Header = () => {
         const fetchRandomProducts = async () => {
           try {
             const res = await fetch(
-              "/api/products?limit=6&fields=name,_id,mainImage"
+              "/api/products?limit=6&fields=name,_id,mainImage",
             );
             const data = await res.json();
             const randomProducts = (data.data || []).map((p) => ({
@@ -84,8 +84,8 @@ const Header = () => {
       try {
         const res = await fetch(
           `/api/products?name=${encodeURIComponent(
-            searchValue
-          )}&limit=6&fields=name,_id,mainImage`
+            searchValue,
+          )}&limit=6&fields=name,_id,mainImage`,
         );
         const data = await res.json();
         let suggs = (data.data || []).map((p) => ({
@@ -114,7 +114,7 @@ const Header = () => {
     } else if (sugg.type === "see_more") {
       if (pathname === "/products") {
         window.location.href = `/products?search=${encodeURIComponent(
-          sugg.query
+          sugg.query,
         )}`;
       } else {
         setSearchValue(sugg.query);
@@ -128,7 +128,7 @@ const Header = () => {
         setShowSuggestions(false);
         if (pathname === "/products") {
           window.location.href = `/products?search=${encodeURIComponent(
-            searchValue
+            searchValue,
           )}`;
         } else {
           router.push(`/products?search=${encodeURIComponent(searchValue)}`);
@@ -139,11 +139,11 @@ const Header = () => {
     }
     if (e.key === "ArrowDown") {
       setHighlightedIndex((prev) =>
-        prev < suggestions.length - 1 ? prev + 1 : 0
+        prev < suggestions.length - 1 ? prev + 1 : 0,
       );
     } else if (e.key === "ArrowUp") {
       setHighlightedIndex((prev) =>
-        prev > 0 ? prev - 1 : suggestions.length - 1
+        prev > 0 ? prev - 1 : suggestions.length - 1,
       );
     } else if (e.key === "Enter") {
       if (highlightedIndex >= 0 && highlightedIndex < suggestions.length) {
@@ -152,7 +152,7 @@ const Header = () => {
         setShowSuggestions(false);
         if (pathname === "/products") {
           window.location.href = `/products?search=${encodeURIComponent(
-            searchValue
+            searchValue,
           )}`;
         } else {
           router.push(`/products?search=${encodeURIComponent(searchValue)}`);
@@ -172,7 +172,7 @@ const Header = () => {
       {(isUserMenuOpen || isMenuOpen || isNotifOpen) && (
         <div
           className={cn(
-            "fixed inset-0 bg-black bg-opacity-0 z-20 transition-opacity duration-300 "
+            "fixed inset-0 bg-black bg-opacity-0 z-20 transition-opacity duration-300 ",
           )}
           onClick={() => {
             setIsUserMenuOpen(false);
@@ -227,7 +227,7 @@ const Header = () => {
                 if (pathname === "/products") {
                   if (searchValue) {
                     window.location.href = `/products?search=${encodeURIComponent(
-                      searchValue
+                      searchValue,
                     )}`;
                   } else {
                     window.location.href = "/products";
@@ -236,7 +236,7 @@ const Header = () => {
                 } else {
                   if (searchValue) {
                     router.push(
-                      `/products?search=${encodeURIComponent(searchValue)}`
+                      `/products?search=${encodeURIComponent(searchValue)}`,
                     );
                   } else {
                     router.push("/products");
@@ -330,7 +330,7 @@ const Header = () => {
                   if (unreadIds.length === 0) return;
                   // Mark all unread as read
                   const updated = user.notifications.map((n) =>
-                    unreadIds.includes(n._id) ? { ...n, read: true } : n
+                    unreadIds.includes(n._id) ? { ...n, read: true } : n,
                   );
 
                   await updateUserData([{ notifications: updated }]);
@@ -368,7 +368,7 @@ const Header = () => {
                       {user.notifications
                         .sort(
                           (a, b) =>
-                            new Date(b.createdAt) - new Date(a.createdAt)
+                            new Date(b.createdAt) - new Date(a.createdAt),
                         )
                         .map((n) => (
                           <li
@@ -380,7 +380,7 @@ const Header = () => {
                               setIsNotifOpen(false);
                               if (n.link) window.location.href = n.link;
                               const updated = user.notifications.filter(
-                                (notif) => notif._id !== n._id
+                                (notif) => notif._id !== n._id,
                               );
                               await updateUserData([
                                 { notifications: updated },
@@ -392,7 +392,7 @@ const Header = () => {
                               onClick={async (e) => {
                                 e.stopPropagation();
                                 const updated = user.notifications.filter(
-                                  (notif) => notif._id !== n._id
+                                  (notif) => notif._id !== n._id,
                                 );
                                 await updateUserData([
                                   { notifications: updated },
@@ -433,7 +433,7 @@ const Header = () => {
               <div
                 className={cn(
                   "h-8 w-8 rounded-full text-black flex justify-center items-center cursor-pointer overflow-hidden",
-                  { "border border-primary": user !== null }
+                  { "border border-primary": user !== null },
                 )}
                 onClick={(e) => {
                   e.stopPropagation();
@@ -467,7 +467,7 @@ const Header = () => {
                 }}
                 className={cn(
                   `hidden absolute top-3 right-2 w-56 z-10000  flex-col z-40  drop-shadow-sm bg-primary bg-opacity-35 backdrop-blur-md rounded-md text-white py-4  pl-4 ${poppins.className} text-[15px]`,
-                  { flex: isUserMenuOpen }
+                  { flex: isUserMenuOpen },
                 )}
               >
                 <Link

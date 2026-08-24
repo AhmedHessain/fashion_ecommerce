@@ -32,7 +32,7 @@ const About = () => {
       <div className="flex h-[512px]">
         <div className="flex justify-center items-center flex-1">
           <div className="flex flex-col gap-10">
-            <h1 className={`text-xxxl font-semibold ${inter.className}`}>
+            <h1 className={`text-3xl font-semibold ${inter.className}`}>
               Our Story
             </h1>
             <div
@@ -121,7 +121,7 @@ const Box = ({ image, header, text }) => {
           priority
         />
       </div>
-      <h2 className={`text-xxl font-bold ${inter.className} mt-6 mb-3`}>
+      <h2 className={`text-xl font-bold ${inter.className} mt-6 mb-3`}>
         {header}
       </h2>
       <p className={`text-base ${poppins.className}`}>{text}</p>

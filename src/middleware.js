@@ -53,8 +53,18 @@ export default async function middleware(req) {
     if (refreshResponse.ok) {
       const data = await refreshResponse.json();
 
-      const response = NextResponse.next();
+      // 1. Create request headers copy to pass payload downstream to Server Components
+      const requestHeaders = new Headers(req.headers);
+      requestHeaders.set("x-access-token", data.newAccessToken);
 
+      // 2. Pass requestHeaders to NextResponse.next
+      const response = NextResponse.next({
+        request: {
+          headers: requestHeaders,
+        },
+      });
+
+      // 3. Set cookie for subsequent browser requests
       response.cookies.set("accessToken", data.newAccessToken, {
         httpOnly: true,
         secure: true,
@@ -62,7 +72,6 @@ export default async function middleware(req) {
         path: "/",
         maxAge: parseInt(process.env.ACCESS_TOKEN_EXPIRATION_DATE) * 60,
       });
-
       return response;
     }
   }

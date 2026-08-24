@@ -13,7 +13,8 @@ const NotFound = () => {
         404 Not Found
       </p>
       <p className={`${poppins.className}`}>
-        Your visited page was not found. You may go home page.
+        This page is still under construction. Please check back later or return
+        to the homepage.
       </p>
       <Link
         href="/"

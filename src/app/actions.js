@@ -9,7 +9,7 @@ import {
   deleteSession,
   decryptAccessToken,
 } from "@/backend/session";
-import { cookies } from "next/headers";
+import { cookies, headers } from "next/headers";
 import { redirect } from "next/navigation";
 import startAsyncTransaction from "@/backend/utils/startAsyncTransaction";
 import ResetToken from "@/backend/model/resetTokenModel";
@@ -149,7 +149,12 @@ export const logout = catchAsyncServerActions(async () => {
 });
 
 export async function GetCurrentUser() {
-  const accessToken = cookies().get("accessToken")?.value;
+  const headerStore = headers();
+  const cookieStore = cookies();
+
+  // Read from injected request header first, fallback to cookie
+  const accessToken =
+    headerStore.get("x-access-token") || cookieStore.get("accessToken")?.value;
   if (!accessToken) return null;
   const accessTokenPayload = await decryptAccessToken(accessToken);
   const userId = accessTokenPayload?.userId;
