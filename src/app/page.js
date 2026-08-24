@@ -31,7 +31,7 @@ export default function Home() {
           `/api/products?page=${page}&limit=${ITEMS_PER_PAGE}`,
           {
             next: { revalidate: 60 },
-          }
+          },
         );
         if (!res.ok) {
           throw new Error("Failed to fetch data");
@@ -68,7 +68,7 @@ export default function Home() {
     <div className="flex flex-col flex-1">
       <section className="flex">
         <div className="basis-3/4 flex flex-col gap-8 px-28 py-14 justify-center max-md:pr-10 max-sm:px-4">
-          <h1 className="text-xxxl max-w-[650px] m-0 tracking-tight leading-[70px]">
+          <h1 className="text-3xl max-w-[650px] m-0 tracking-tight leading-[70px]">
             Discover Your Style with Our Exclusive Collection
           </h1>
           <h3 className="text-l m-0 italic">
