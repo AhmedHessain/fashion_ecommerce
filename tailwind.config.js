@@ -3,9 +3,7 @@ const plugin = require("tailwindcss/plugin");
 
 module.exports = {
   content: [
-    "./src/pages/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/components/**/*.{js,ts,jsx,tsx,mdx}",
-    "./src/app/**/*.{js,ts,jsx,tsx,mdx}",
+    "./src/**/*.{js,ts,jsx,tsx,mdx}", // Catches ALL files under /src automatically
   ],
   theme: {
     extend: {
@@ -15,13 +13,15 @@ module.exports = {
         text: "#2C3E50",
         item_background: "#FAFAFA",
       },
+      // Fixed font sizes mapping to standard Tailwind class names
       fontSize: {
-        sm: "8px",
+        xs: "8px",
+        sm: "12px",
         base: "16px",
-        l: "24px",
+        lg: "24px",
         xl: "32px",
-        xxl: "48px",
-        xxxl: "68px",
+        "2xl": "48px",
+        "3xl": "68px",
       },
       textShadow: {
         sm: "0 1px 2px var(--tw-shadow-color)",
@@ -38,7 +38,7 @@ module.exports = {
             textShadow: value,
           }),
         },
-        { values: theme("textShadow") }
+        { values: theme("textShadow") },
       );
     }),
   ],
